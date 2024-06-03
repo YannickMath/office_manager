@@ -13,8 +13,8 @@ export function HeaderMenu({
     { label: "Accueil", url: "/" }, //Home.tsx
     { label: "Mes services", url: "/services" },
     { label: "Tarifs", url: "/tarifs" }, //Tarifs.tsx
-    { label: "A propos", url: "/a-propos" }, //APropos.tsx
-    { label: "Contact", url: "/contact" }, //Contact.tsx
+    { label: "A propos", url: "/aPropos" }, //APropos.tsx
+    { label: "Contact", url: "/contacts" }, //Contact.tsx
   ];
   return (
     <div className="flex flex-row w-full h-full justify-center items-center bg-blue-50">
