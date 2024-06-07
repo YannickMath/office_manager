@@ -8,13 +8,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      backgroundImage: (theme) => ({
+        "teamwork-bg": "url('/teamwork.jpg')",
+        "efficiency-bg": "url('/efficiency.jpg')",
+        "titreJob-bg": "url('/laptop-with-notebook-wooden-table.jpg')",
+      }),
+      colors: {
+        customBrown: "#d2b697",
+      },
+      screens: {
+        mini: { max: "498px" },
+        phone: { max: "640px" },
+        // => @media (min-width: 480px) { ... }
+        laptop: { max: "1024px" },
+        // => @media (min-width: 1024px) { ... }
+      },
+      fontFamily: {
+        verdana: ["Verdana", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
 export default config;

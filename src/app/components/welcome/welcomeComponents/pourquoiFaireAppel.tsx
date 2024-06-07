@@ -1,8 +1,8 @@
-import Button from "../shared/button";
+import Button from "../../shared/button";
 
 export default function PourquoiFaireAppel(): JSX.Element {
   return (
-    <div className="flex flex-col w-full justify-center items-center gap-6 p-6 border-2">
+    <div className="flex flex-col  w-full justify-center items-center gap-6 p-6 border-2">
       <div>
         <h2 className="text-2xl">Pourquoi faire appel à mes services ?</h2>
       </div>

@@ -24,21 +24,24 @@ export default function MesPrestations() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const imageWidth = windowWidth < 899 ? 100 : 200;
+  const imageWidth = windowWidth < 899 ? 90 : 180;
 
   return (
-    <div className="flex flex-col border-2 gap-8 p-6 items-center">
+    <div className="flex flex-col items-center border-2 gap-12 p-6">
       <div>
         <h2 className="text-2xl">Mes prestations</h2>
       </div>
-      <div className="flex phone:flex-col flex-row justify-evenly w-full gap-4">
+      <div
+        className="flex flex-row w-3/4 justify-evenly gap-4
+                      phone:flex-col "
+      >
         {imagesArray.map((image) => (
           <Image
             key={image.id}
             src={image.src}
             alt={image.alt}
             width={imageWidth}
-            height={100}
+            height={90}
           />
         ))}
       </div>
