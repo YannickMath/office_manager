@@ -1,15 +1,14 @@
 import React from "react";
-import TitreJob from "./welcomeComponents/titreJob";
 import Intro from "./welcomeComponents/intro";
+import Titre from "./welcomeComponents/titre";
 import MiniCV from "./welcomeComponents/miniCV";
-import MesPrestations from "./welcomeComponents/mesPrestations";
-import PourquoiFaireAppel from "./welcomeComponents/pourquoiFaireAppel";
+import Prestations from "./welcomeComponents/prestations";
 
 export default function Welcome(): JSX.Element {
   return (
     <div className="flex flex-col w-full justify-center items-center gap-10 ">
       <div className="w-full">
-        <TitreJob />
+        <Titre />
       </div>
       <div className="w-full">
         <Intro />
@@ -18,7 +17,7 @@ export default function Welcome(): JSX.Element {
         <MiniCV />
       </div>
       <div className="w-4/6">
-        <MesPrestations />
+        <Prestations />
       </div>
     </div>
   );

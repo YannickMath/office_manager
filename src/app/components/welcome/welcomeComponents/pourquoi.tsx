@@ -1,6 +1,6 @@
-import Button from "../../shared/button";
+import Button from "../../utils/button";
 
-export default function PourquoiFaireAppel(): JSX.Element {
+export default function Pourquoi(): JSX.Element {
   return (
     <div className="flex flex-col  w-full justify-center items-center gap-6 p-6 border-2">
       <div>
@@ -32,7 +32,7 @@ export default function PourquoiFaireAppel(): JSX.Element {
             <Button
               color="indigo"
               label="Voir mes prestations"
-              url="/mes-prestations"
+              url="/services"
             />
           </div>
         </div>

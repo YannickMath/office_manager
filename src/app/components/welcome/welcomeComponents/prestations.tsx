@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function MesPrestations() {
+export default function Prestations() {
   const imagesArray = [
     { id: "1", src: "/gestion_administrative.webp", alt: "secretariat" },
     { id: "2", src: "/gestion_administrative.webp", alt: "secretariat2" },
@@ -33,7 +33,7 @@ export default function MesPrestations() {
       </div>
       <div
         className="flex flex-row w-3/4 justify-evenly gap-4
-                      phone:flex-col "
+                      phone:flex-col phone:items-center"
       >
         {imagesArray.map((image) => (
           <Image

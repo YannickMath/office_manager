@@ -1,4 +1,4 @@
-export default function TitreJob(): JSX.Element {
+export default function Titre(): JSX.Element {
   return (
     <div
       className="bg-titreJob-bg bg-cover bg-center bg-no-repeat 

@@ -1,10 +1,10 @@
 import { FcAssistant } from "react-icons/fc";
-import Button from "../../shared/button";
+import Button from "../../utils/button";
 
 export default function MiniCV(): JSX.Element {
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex flex-col w-2/3 gap-12 border-2 border-primary  p-6">
+      <div className="flex flex-col w-2/3 gap-12 border-2 border-primary p-6">
         <div className="flex flex-row h-1/4">
           <div className="flex justify-center border-2 items-center w-1/3">
             <FcAssistant className="w-20 h-20" />
@@ -28,11 +28,7 @@ export default function MiniCV(): JSX.Element {
               développement de votre cabinet.
             </p>
           </div>
-          <Button
-            color="indigo"
-            label="Voir mes prestations"
-            url="/mes-prestations"
-          />
+          <Button color="indigo" label="Voir mes prestations" url="/services" />
         </div>
       </div>
     </div>
