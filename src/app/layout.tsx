@@ -11,8 +11,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { isTransparent, toggleMenuIsOpen, handleOpenMenu, handleScroll } =
-    useLayout();
+  const { isTransparent, handleScroll } = useLayout();
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -29,10 +28,7 @@ export default function RootLayout({
               isTransparent ? "transparent" : ""
             }`}
           >
-            <HeaderMenu
-              handleOpenMenu={handleOpenMenu}
-              toggleMenuIsOpen={toggleMenuIsOpen}
-            />
+            <HeaderMenu />
           </div>
           {children}
           <Footer />
