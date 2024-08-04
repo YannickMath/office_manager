@@ -1,40 +1,37 @@
-import Button from "../../utils/button";
+import { GrValidate } from "react-icons/gr";
 
 export default function Pourquoi(): JSX.Element {
-  return (
-    <div className="flex flex-col  w-full justify-center items-center gap-6 p-6 border-2">
-      <div>
-        <h2 className="text-2xl">Pourquoi faire appel à mes services ?</h2>
+  const pourquoiItems = [
+    { id: 1, label: "Gagner en productivité" },
+    { id: 2, label: "Se consacrer pleinement à son coeur de métier" },
+    { id: 3, label: "Gagner en flexibilité" },
+    { id: 4, label: "Se libérer du temps" },
+    { id: 5, label: "Déléguer en toute sérénité et confidentialité" },
+    { id: 6, label: "Maîtriser son budget" },
+  ];
+
+  const pourquoiItem = pourquoiItems.map((item) => (
+    <div
+      key={item.id}
+      className=" flex flex-row w-full justify-center items-center gap-6 text-xl"
+    >
+      <div className="flex w-1/3 justify-end">
+        <GrValidate className="w-6 h-6" />
       </div>
-      <div className="fex flex-col gap-6 p-2">
-        <div className="flex items-center flex-col gap-4">
-          <div className="flex flex-col w-full h-1/4  justify-center gap-1 text-l border-2">
-            <p>
-              Vous souhaitez déléguer votre administratif pour vous consacrer à
-              votre cœur de métier ?
-            </p>
-            <p>Vous rencontrez un surcroît d&apos;activité ?</p>
-            <p>
-              Votre collaborateur est absent et vous souhaitez assurer un suivi
-              pendant son absence ?
-            </p>
-            <p>
-              L&apos;externalisation de votre administratif est la solution à
-              vos besoins !
-            </p>
-          </div>
-          <div className="flex flex-col gap-2 w-1/2 justify-center   border-2">
-            <p>Un renseignement, une question, un devis ? </p>
-            <p> Une aide pour évaluer vos besoins ?</p>
-            <p> Discutons-en ensemble !</p>
-          </div>
-          <div>
-            <Button
-              color="indigo"
-              label="Voir mes prestations"
-              url="/services"
-            />
-          </div>
+      <div className="w-2/3 ">
+        <p>{item.label}</p>
+      </div>
+    </div>
+  ));
+
+  return (
+    <div className="flex items-center justify-center">
+      <div className="flex flex-col w-2/3 fondBleuLogo justify-center items-center rounded-xl  shadow-xl gap-6 p-4 border-2">
+        <h1 className="text-3xl font-bold">
+          Pourquoi faire appel à mes services ?
+        </h1>
+        <div className="flex flex-col w-full h-1/4 items-start gap-4">
+          {pourquoiItem}
         </div>
       </div>
     </div>

@@ -1,27 +1,23 @@
 import React from "react";
+
 import Link from "next/link";
 import Image from "next/image";
-import { FcAssistant } from "react-icons/fc";
+
 import { LuMenuSquare } from "react-icons/lu";
 import { HeaderMenuProps } from "@/app/interface/haderMenuInterface";
-import { Item } from "@/app/interface/haderMenuInterface";
+import useHeader from "@/app/hooks/useHeader";
 
 export function HeaderMenu({
   handleOpenMenu,
   toggleMenuIsOpen,
 }: HeaderMenuProps) {
-  const items: Item[] = [
-    { label: "Accueil", url: "/" },
-    { label: "Mes services", url: "/services" },
-    { label: "Tarifs", url: "/tarifs" },
-    { label: "A propos", url: "/aPropos" },
-    { label: "Contact", url: "/contacts" },
-  ];
+  const { MenuContent, items } = useHeader();
+
   return (
-    <div className="flex flex-row w-full h-full justify-around items-center bg-blue-50">
+    <div className="flex flex-row w-full h-full justify-evenly items-center bg-blue-50">
       <Image src="/LOGO_CB_Noire.png" alt="logo" width={150} height={150} />
       <nav
-        className="flex h-full items-center  p-4 text-xl
+        className="flex h-full items-center p-4 text-xl
                   phone:text-xs phone:w-4/6"
       >
         <LuMenuSquare
@@ -46,27 +42,7 @@ export function HeaderMenu({
           ))}
         </ul>
       </nav>
-      {toggleMenuIsOpen ? (
-        <nav className="w-4/6  text-xs">
-          <ul
-            className="flex flex-col w-full items-end justify-between p-2 
-                        phone:hidden"
-          >
-            {items.map((item, index) => (
-              <li key={index}>
-                <Link
-                  className="hover:text-blue-700 hover:underline"
-                  href={item.url}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      ) : (
-        <></>
-      )}
+      {toggleMenuIsOpen ? <MenuContent /> : null}
     </div>
   );
 }
