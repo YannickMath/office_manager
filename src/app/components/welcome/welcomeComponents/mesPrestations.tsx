@@ -27,7 +27,7 @@ export default function MesPrestations() {
   const imageWidth = windowWidth < 899 ? 90 : 180;
 
   return (
-    <div className="flex flex-col items-center border-2 gap-12 p-6">
+    <div className="flex flex-col items-center border-2 gap-12 p-6 mb-10">
       <div>
         <h2 className="text-2xl">Mes prestations</h2>
       </div>

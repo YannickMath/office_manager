@@ -16,12 +16,8 @@ body {
 }
 
 .fonduBrown {
-  background-image: linear-gradient(
-    to top,
-    #c4b498,
-    #cabca3,
-    #d1c4ae,
-    #d7ccba,
-    #ddd4c5
-  );
+  background-color: #d5b09d;
+}
+.fonduBleuLogo {
+  background-color: #3d8cc4;
 }

@@ -1,43 +1,29 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./globals.css";
 import { HeaderMenu } from "./components/headerMenu/headerMenu";
 import Footer from "./components/footer/footer";
+import useLayout from "./hooks/useLayout";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isTransparent, setIsTransparent] = useState(false);
-  console.log("isTransparent", isTransparent);
+  const { isTransparent, toggleMenuIsOpen, handleOpenMenu, handleScroll } =
+    useLayout();
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 550) {
-        setIsTransparent(true);
-      } else {
-        setIsTransparent(false);
-      }
-    };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
-  const [toggleMenuIsOpen, setToggleMenuIsOpen] = React.useState(false);
-
-  const handleOpenMenu = () => {
-    setToggleMenuIsOpen(!toggleMenuIsOpen);
-  };
+  }, [handleScroll]);
 
   return (
     <>
       <html lang="en">
-        <body>
+        <body className="bg-customBrown">
           <div
             className={`h-32 sticky top-0 z-10 flex items-center bg-zinc-50 header ${
               isTransparent ? "transparent" : ""

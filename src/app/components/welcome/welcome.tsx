@@ -7,7 +7,7 @@ import PourquoiFaireAppel from "./welcomeComponents/pourquoiFaireAppel";
 
 export default function Welcome(): JSX.Element {
   return (
-    <div className="flex flex-col w-full justify-center items-center ">
+    <div className="flex flex-col w-full justify-center items-center gap-10 ">
       <div className="w-full">
         <TitreJob />
       </div>

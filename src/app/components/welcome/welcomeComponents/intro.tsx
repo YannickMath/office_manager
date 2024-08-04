@@ -25,10 +25,8 @@ export default function Intro(): JSX.Element {
   ));
 
   return (
-    <div className="relative w-full flex flex-col justify-center items-center">
-      <div className="bg-teamwork-bg bg-cover bg-center opacity-35 w-full h-full absolute"></div>
-
-      <div className="relative z-10 flex flex-col w-full justify-center items-center gap-6 p-4">
+    <div className="flex items-center justify-center">
+      <div className="flex flex-col w-2/3 fondBleuLogo justify-center items-center rounded-xl  shadow-xl gap-6 p-4 border-2">
         <h1 className="text-3xl font-bold">
           Pourquoi faire appel à mes services ?
         </h1>

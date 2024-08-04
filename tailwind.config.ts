@@ -15,6 +15,7 @@ const config: Config = {
       }),
       colors: {
         customBrown: "#d2b697",
+        customRose: "#E8AEB7",
       },
       screens: {
         mini: { max: "498px" },

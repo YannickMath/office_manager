@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FcAssistant } from "react-icons/fc";
 import { LuMenuSquare } from "react-icons/lu";
 import { HeaderMenuProps } from "@/app/interface/haderMenuInterface";
@@ -17,8 +18,8 @@ export function HeaderMenu({
     { label: "Contact", url: "/contacts" },
   ];
   return (
-    <div className="flex flex-row w-full h-full justify-center items-center bg-blue-50">
-      <FcAssistant className="w-1/6 h-2/3" />
+    <div className="flex flex-row w-full h-full justify-around items-center bg-blue-50">
+      <Image src="/LOGO_CB_Noire.png" alt="logo" width={150} height={150} />
       <nav
         className="flex h-full items-center  p-4 text-xl
                   phone:text-xs phone:w-4/6"
