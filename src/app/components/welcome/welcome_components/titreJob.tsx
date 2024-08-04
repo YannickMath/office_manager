@@ -1,4 +1,4 @@
-import Titre from "../../utils/titre";
+import Titre from "../../../utils/titre";
 
 export default function TitreJob(): JSX.Element {
   const title = "OFFICE MANAGER INDEPENDANT";

@@ -6,7 +6,6 @@ const useHeader = () => {
     { label: "Accueil", url: "/" },
     { label: "Mes services", url: "/services" },
     { label: "Tarifs", url: "/tarifs" },
-    { label: "A propos", url: "/aPropos" },
     { label: "Contact", url: "/contacts" },
   ];
 
@@ -16,13 +15,10 @@ const useHeader = () => {
         className="flex flex-col w-full items-end justify-between p-2 
                       phone:hidden"
       >
-        {items.map((item, index) => (
+        {items.map(({ url, label }, index) => (
           <li key={index}>
-            <Link
-              className="hover:text-blue-700 hover:underline"
-              href={item.url}
-            >
-              {item.label}
+            <Link className="hover:text-blue-700 hover:underline" href={url}>
+              {label}
             </Link>
           </li>
         ))}

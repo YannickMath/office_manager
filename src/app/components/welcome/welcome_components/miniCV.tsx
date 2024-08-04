@@ -1,5 +1,5 @@
 import { FcAssistant } from "react-icons/fc";
-import Button from "../../utils/button";
+import Button from "../../../utils/button";
 
 export default function MiniCV(): JSX.Element {
   const arrayBuilderItems = [

@@ -14,7 +14,7 @@ export function HeaderMenu({
   const { MenuContent, items } = useHeader();
 
   return (
-    <div className="flex flex-row w-full h-full justify-evenly items-center bg-blue-50">
+    <div className="flex flex-row w-full h-full justify-center items-center bg-blue-50 gap-[6vw]">
       <Image src="/LOGO_CB_Noire.png" alt="logo" width={150} height={150} />
       <nav
         className="flex h-full items-center p-4 text-xl
@@ -28,14 +28,14 @@ export function HeaderMenu({
           className="flex flex-row w-full items-end justify-center gap-8 p-4 border-b border-r  border-black
                     phone:hidden "
         >
-          {items.map((item, index) => (
+          {items.map(({ url, label }, index) => (
             <li key={index}>
-              <Link href={item.url}>
+              <Link href={url}>
                 <p
                   className="p-2 rounded-lg transition duration-300 ease-in-out 
-                            hover:bg-customBrown hover:text-black"
+                            hover:bg-customBrown"
                 >
-                  {item.label}
+                  {label}
                 </p>
               </Link>
             </li>

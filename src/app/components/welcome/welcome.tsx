@@ -1,9 +1,8 @@
 import React from "react";
-import Intro from "./welcomeComponents/pourquoi";
-import Titre from "./welcomeComponents/titreJob";
-import MiniCV from "./welcomeComponents/miniCV";
-import Prestations from "./welcomeComponents/prestations";
-import TitreJob from "./welcomeComponents/titreJob";
+import Intro from "./welcome_components/pourquoi";
+import MiniCV from "./welcome_components/miniCV";
+import Prestations from "./welcome_components/prestations";
+import TitreJob from "./welcome_components/titreJob";
 
 export default function Welcome(): JSX.Element {
   return (

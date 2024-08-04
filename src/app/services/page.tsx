@@ -1,6 +1,6 @@
 import React from "react";
-import Titre from "../components/utils/titre";
-import Button from "../components/utils/button";
+import Titre from "../utils/titre";
+import Button from "../utils/button";
 import Image from "next/image";
 
 const IntroductionItems = ({ items }: any) => {
