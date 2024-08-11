@@ -3,17 +3,24 @@ import Button from "../../../utils/button";
 
 export default function MiniCV(): JSX.Element {
   const arrayBuilderItems = [
-    { id: 1, label: "Bonjour, je suis Cécile Boiron" },
-    { id: 2, label: "Office Manager Indépendant" },
+    {
+      id: 1,
+      label:
+        "Bonjour, je suis Cécile Boiron, ancienne ADQ, avec de 15 ans d'expérience en cabinet dentaire, je dispose d'un riche parcours professionnel qui m'apporte aujourd'hui de solides compétences sur de multiples aspects de la gestion dans un cabinet dentaire",
+    },
+    {
+      id: 2,
+      label:
+        "Mon objectif: alléger votre charge administrative pour vous recentrer sur votre métier et gagner en sérénité et rentabilité.",
+    },
     {
       id: 3,
-      label:
-        "Assistante dentaire qualifiée avec plus de 15 ans d'expérience, je dispose d'un riche parcours professionnel et de solides compétences d'assistant administratif.",
+      label: "Ma priorité: votre satifsaction et celle de vos patients !",
     },
     {
       id: 4,
       label:
-        "Mon objectif est de vous accompagner dans la gestion et le développement de votre cabinet.",
+        "Petit plus: la confidentialité. Pour les dirigeants qui préfèrent que certaines données sensibles, notamment RH ou financières, ne soient pas gérées en interne par un salarié.",
     },
   ];
 

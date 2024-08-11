@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Item } from "@/app/interface/haderMenuInterface";
@@ -9,8 +9,7 @@ export function HeaderMenu() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-    console.log("toggleDropdown", isDropdownOpen);
+    setDropdownOpen((prev) => !prev);
   };
 
   const closeDropdown = () => {
@@ -26,13 +25,9 @@ export function HeaderMenu() {
     { label: "Contact", url: "/contacts" },
   ];
 
-  useEffect(() => {
-    console.log("isDropdownOpen updated:", isDropdownOpen);
-  }, [isDropdownOpen === false]);
-
   return (
-    <div className="relative flex flex-row w-full h-full justify-between items-center bg-blue-50 p-4">
-      <Image src="/LOGO_CB_Noire.png" alt="logo" width={150} height={150} />
+    <div className="relative flex flex-row w-full h-full justify-center gap-[10vw] text-xs phone:gap-4 items-center bg-blue-50 p-4">
+      <Image src="/LOGO_CB_Noire.png" alt="logo" width={180} height={180} />
       <nav className="hidden md:flex h-full items-center text-xl gap-8">
         {items.map(({ url, label }, index) => (
           <li key={index} className="list-none">
@@ -72,7 +67,7 @@ export function HeaderMenu() {
           <div
             id="dropdown"
             ref={dropdownRef}
-            className="absolute right-0 mt-10 w-44 bg-white divide-y divide-gray-100 rounded-lg shadow z-50"
+            className="absolute right-0 mt-2 w-44 bg-white divide-y divide-gray-100 rounded-lg shadow z-50"
           >
             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
               {items.map(({ url, label }, index) => (
