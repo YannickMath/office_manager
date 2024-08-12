@@ -1,55 +1,67 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { GrValidate } from "react-icons/gr";
+import useContactForm from "../hooks/useContactForm";
 
 export default function ContactForm() {
-  const [result, setResult] = useState("");
-
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target as HTMLFormElement);
-
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setResult("Form Submitted Successfully");
-        (event.target as HTMLFormElement).reset();
-      } else {
-        console.log("Error", data);
-        setResult(data.message);
-      }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      setResult("An error occurred. Please try again later.");
-    }
-  };
+  const {
+    result,
+    onSubmit,
+    success,
+    name,
+    setName,
+    email,
+    setEmail,
+    message,
+    setMessage,
+  } = useContactForm();
 
   const arrayBuilderInputs = [
-    { id: 1, name: "name", type: "text", label: "Name" },
-    { id: 2, name: "email", type: "email", label: "Email" },
+    {
+      id: 1,
+      name: "name",
+      type: "text",
+      label: "Nom",
+      value: name,
+      onChange: (e: any) => setName(e.target.value),
+    },
+    {
+      id: 2,
+      name: "email",
+      type: "email",
+      label: "Email",
+      value: email,
+      onChange: (e: any) => setEmail(e.target.value),
+    },
   ];
 
-  const inputContent = arrayBuilderInputs.map(({ id, name, type, label }) => (
-    <div key={id} className="flex flex-col">
-      <label htmlFor={name}>{label}</label>
-      <input id={name} type={type} name={name} required />
-    </div>
-  ));
+  const inputContent = arrayBuilderInputs.map(
+    ({ id, name, type, label, value, onChange }) => (
+      <div key={id} className="flex flex-col">
+        <label htmlFor={name}>{label}</label>
+        <input
+          id={name}
+          type={type}
+          name={name}
+          value={value}
+          onChange={onChange}
+          required
+        />
+      </div>
+    )
+  );
 
   const messageInput = (
     <div className="flex flex-col">
       <label htmlFor="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
+      <textarea
+        id="message"
+        name="message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        required
+      ></textarea>
     </div>
   );
 
@@ -61,9 +73,18 @@ export default function ContactForm() {
       >
         {inputContent}
         {messageInput}
-        <button type="submit">Envoyer</button>
+        {success ? (
+          <div className="flex items-center">
+            <GrValidate color={"green"} />
+            <span className="ml-2 text-green-600">
+              Message envoyé avec succès!
+            </span>
+          </div>
+        ) : (
+          <button type="submit">Envoyer</button>
+        )}
       </form>
-      <span>{result}</span>
+      <span className="mt-4 text-green-600">{result}</span>
     </div>
   );
 }

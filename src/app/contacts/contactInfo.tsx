@@ -8,7 +8,7 @@ export default function ContactInfo() {
     nom: "Cécile BOIRON",
     adresse: "71 rue Pré-Gaudry, 69007 Lyon",
     activité: "Office Manager Indépendant",
-    email: "cec.boiron@gmail.com",
+    email: "omi.cb.contact@gmail.com",
     téléphone: "06 00 00 00 00 ",
   };
 
