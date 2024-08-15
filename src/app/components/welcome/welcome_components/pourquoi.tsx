@@ -1,6 +1,24 @@
 import { GrValidate } from "react-icons/gr";
+import CardContainer from "../../shared/cardContainer";
 
 export default function Pourquoi(): JSX.Element {
+  const PourquoiItem: React.FC<{ id: number; label: string }> = ({
+    id,
+    label,
+  }) => (
+    <div
+      key={id}
+      className="flex flex-row w-full justify-center items-center gap-6 text-base"
+    >
+      <div className="flexs">
+        <GrValidate className="w-6 h-6" />
+      </div>
+      <div className="w-full">
+        <p>{label}</p>
+      </div>
+    </div>
+  );
+
   const pourquoiItems = [
     { id: 1, label: "Se consacrer pleinement à son coeur de métier" },
     { id: 2, label: "Gagner en productivité" },
@@ -11,22 +29,12 @@ export default function Pourquoi(): JSX.Element {
   ];
 
   const pourquoiItem = pourquoiItems.map((item) => (
-    <div
-      key={item.id}
-      className=" flex flex-row w-full justify-center items-center gap-6 text-base"
-    >
-      <div className="flex w-1/3 justify-end">
-        <GrValidate className="w-6 h-6" />
-      </div>
-      <div className="w-2/3 ">
-        <p>{item.label}</p>
-      </div>
-    </div>
+    <PourquoiItem key={item.id} id={item.id} label={item.label} />
   ));
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="flex flex-col w-2/3 fondBleuLogo justify-center items-center rounded-xl  shadow-xl gap-6 p-4 border-2">
+    <CardContainer width="w-1/2">
+      <div className="flex flex-col gap-8">
         <h1 className="text-xl font-bold">
           Pourquoi faire appel à mes services ?
         </h1>
@@ -34,6 +42,6 @@ export default function Pourquoi(): JSX.Element {
           {pourquoiItem}
         </div>
       </div>
-    </div>
+    </CardContainer>
   );
 }

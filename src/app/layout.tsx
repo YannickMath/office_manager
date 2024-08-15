@@ -21,8 +21,8 @@ export default function RootLayout({
 
   return (
     <>
-      <html lang="en">
-        <body className="bg-customBrown">
+      <html lang="en" className="h-full">
+        <body className="flex flex-col justify-between h-full bg-customBrown">
           <div
             className={`h-32 sticky top-0 z-10 flex items-center bg-zinc-50 header ${
               isTransparent ? "transparent" : ""
@@ -30,7 +30,7 @@ export default function RootLayout({
           >
             <HeaderMenu />
           </div>
-          {children}
+          <main className="flex-grow">{children}</main>
           <Footer />
         </body>
       </html>

@@ -79,7 +79,12 @@ export default function ContactForm() {
             </span>
           </div>
         ) : (
-          <button type="submit">Envoyer</button>
+          <button
+            type="submit"
+            className="w-1/4 bg-blue-600 hover:bg-blue-900 text-white rounded-lg p-2"
+          >
+            Envoyer
+          </button>
         )}
       </form>
       <span className="mt-4 text-green-600">{result}</span>

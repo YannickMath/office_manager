@@ -1,9 +1,9 @@
 import { ButtonProps } from "@/app/interface/buttonInterface";
 
 const buttonSizeMap: { [key: string]: string } = {
-  xSmall: "w-1/6",
-  small: "w-1/4",
-  normal: "w-1/2",
+  xSmall: "w-1/4",
+  small: "w-1/2",
+  normal: "w-full",
 };
 
 const colorMap: { [key: string]: string } = {
@@ -23,16 +23,18 @@ export default function Button({
   size = "normal",
 }: ButtonProps) {
   return (
-    <button
-      type="button"
-      className={`${size ? buttonSizeMap[size] : ""}
-      ${color ? colorMap[color] : ""}
-      text-white text-sm font-bold py-2 px-4 rounded-lg
-      hover:bg-opacity-80 hover:bg-blue-800 transition duration-500 ease-in-out
-      focus:border-2 focus:border-${color}-700 
-      `}
-    >
-      <a href={url}>{label}</a>
-    </button>
+    <a href={url}>
+      <button
+        type="button"
+        className={`${size ? buttonSizeMap[size] : ""}
+        ${color ? colorMap[color] : ""}
+        text-white text-sm font-bold py-2 px-4 rounded-lg
+        hover:bg-opacity-80 hover:bg-blue-800 transition duration-500 ease-in-out
+        focus:border-2 focus:border-${color}-700 
+        `}
+      >
+        {label}
+      </button>
+    </a>
   );
 }
