@@ -1,6 +1,6 @@
 import Titre from "../../shared/titre";
 
-export default function TitreJob(): JSX.Element {
+export default function Banner(): JSX.Element {
   const title = "OFFICE MANAGER INDEPENDANT";
   const description =
     "Collaborateur externe pour la gestion et le développement de votre cabinet dentaire";

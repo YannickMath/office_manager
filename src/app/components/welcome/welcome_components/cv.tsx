@@ -2,7 +2,7 @@ import { FcAssistant } from "react-icons/fc";
 import Button from "../../shared/button";
 import CardContainer from "../../shared/cardContainer";
 
-export default function MiniCV(): JSX.Element {
+export default function Cv(): JSX.Element {
   const arrayBuilderItems = [
     {
       id: 1,
@@ -48,23 +48,18 @@ export default function MiniCV(): JSX.Element {
           <div className="flex justify-center  items-center w-1/3">
             <FcAssistant className="w-20 h-20" />
           </div>
-          <div className="flex flex-col items-start justify-center border-2 border-gray-400 rounded-xl text-l w-2/3 gap-4 p-2">
+          <div className="flex flex-col items-start justify-center rounded-xl text-l w-2/3 gap-4 p-2">
             <Items1 />
           </div>
         </div>
 
-        <div className="flex flex-col gap-10">
-          <div className="flex flex-col items-start justify-center gap-4">
-            <Items2 />
-          </div>
-          <div className="flex flex-row justify-center">
-            <Button
-              color="indigo"
-              label="Voir mes prestations"
-              url="/services"
-              size="normal"
-            />
-          </div>
+        <div className="flex flex-row justify-center">
+          <Button
+            color="indigo"
+            label="Contactez moi"
+            url="/contacts"
+            size="normal"
+          />
         </div>
       </div>
     </CardContainer>

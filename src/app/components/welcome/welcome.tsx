@@ -1,20 +1,21 @@
 import React from "react";
-import Intro from "./welcome_components/pourquoi";
-import MiniCV from "./welcome_components/miniCV";
+
 import Prestations from "./welcome_components/prestations";
-import TitreJob from "./welcome_components/titreJob";
+import Cv from "./welcome_components/cv";
+import Banner from "./welcome_components/banner";
+import Pourquoi from "./welcome_components/pourquoi";
 
 export default function Welcome(): JSX.Element {
   return (
     <div className="flex flex-col w-full h-full justify-center items-center gap-10">
       <div className="w-full">
-        <TitreJob />
+        <Banner />
       </div>
       <div className="flex w-full justify-center">
-        <Intro />
+        <Pourquoi />
       </div>
       <div className="flex w-full justify-center">
-        <MiniCV />
+        <Cv />
       </div>
       <div className="flex w-full justify-center mb-10">
         <Prestations />
