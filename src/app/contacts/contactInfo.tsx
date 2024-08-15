@@ -6,7 +6,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 export default function ContactInfo() {
   const infoPersonnel = {
     nom: "Cécile BOIRON",
-    adresse: "71 rue Pré-Gaudry, 69007 Lyon",
+    adresse: "69007 LYON",
     activité: "Office Manager Indépendant",
     email: "omi.cb.contact@gmail.com",
     téléphone: "06 00 00 00 00 ",
@@ -31,16 +31,21 @@ export default function ContactInfo() {
       <div className="flex flex-col">
         {arrayBuilderIcons.map(({ id, icon, text }) => {
           return (
-            <div
-              key={id}
-              className={`flex items-center w-3/4 lg:w-full gap-4 ${
-                id === 3 ? "cursor-pointer hover:underline" : ""
-              }`}
-            >
+            <div key={id} className="flex items-center w-3/4 lg:w-full gap-4 ">
               <div>{icon}</div>
               <div>
                 {id === 3 ? (
-                  <a href={`mailto:${text}`}>{text}</a>
+                  <a
+                    href={`mailto:${email}`}
+                    className={`
+                      ${
+                        id === 3
+                          ? "cursor-pointer hover:underline hover:text-blue-800"
+                          : ""
+                      }`}
+                  >
+                    {text}
+                  </a>
                 ) : (
                   <span>{text}</span>
                 )}

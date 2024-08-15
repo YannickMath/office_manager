@@ -38,7 +38,7 @@ export default function ContactForm() {
 
   const inputContent = arrayBuilderInputs.map(
     ({ id, name, type, label, value, onChange }) => (
-      <div key={id} className="flex flex-col">
+      <div key={id} className="flex flex-col w-1/2 rounded-lg">
         <label htmlFor={name}>{label}</label>
         <input
           id={name}
@@ -53,12 +53,13 @@ export default function ContactForm() {
   );
 
   const messageInput = (
-    <div className="flex flex-col">
+    <div className="flex flex-col rounded-lg">
       <label htmlFor="message">Message</label>
       <textarea
         id="message"
         name="message"
         value={message}
+        className="h-24"
         onChange={(e) => setMessage(e.target.value)}
         required
       ></textarea>
@@ -66,11 +67,8 @@ export default function ContactForm() {
   );
 
   return (
-    <div>
-      <form
-        onSubmit={onSubmit}
-        className="flex flex-col w-1/2 justify-center gap-4"
-      >
+    <div className="w-1/2">
+      <form onSubmit={onSubmit} className="flex flex-col justify-center gap-4">
         {inputContent}
         {messageInput}
         {success ? (
