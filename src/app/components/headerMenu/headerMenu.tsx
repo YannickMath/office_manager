@@ -1,42 +1,25 @@
-import React, { useState, useRef } from "react";
-import Link from "next/link";
+import React from "react";
+
 import Image from "next/image";
-import { Item } from "@/app/interface/haderMenuInterface";
-import ClickOutside from "@/app/utils/clickOutside";
+import Link from "next/link";
+import useHeaderMenu from "@/app/hooks/useHeaderMenu";
 
-export function HeaderMenu() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const toggleDropdown = () => {
-    setDropdownOpen((prev) => !prev);
-  };
-
-  const closeDropdown = () => {
-    setDropdownOpen(false);
-  };
-
-  ClickOutside(dropdownRef, closeDropdown);
-
-  const items: Item[] = [
-    { label: "Accueil", url: "/" },
-    { label: "Services", url: "/services" },
-    { label: "Tarifs", url: "/tarifs" },
-    { label: "Contact", url: "/contacts" },
-  ];
+const HeaderMenu = () => {
+  const { isDropdownOpen, dropdownRef, items, closeDropdown, toggleDropdown } =
+    useHeaderMenu();
 
   return (
     <div className="relative flex flex-row w-full h-full justify-center gap-[10vw] text-xs phone:gap-4 items-center bg-blue-50 p-4">
       <Image src="/LOGO_CB_Noire.png" alt="logo" width={180} height={180} />
       <nav className="hidden md:flex h-full items-center text-xl gap-8">
         {items.map(({ url, label }, index) => (
-          <li key={index} className="list-none">
+          <div key={index} className="list-none">
             <Link href={url}>
               <p className="p-2 rounded-lg transition duration-300 ease-in-out hover:bg-customBrown">
                 {label}
               </p>
             </Link>
-          </li>
+          </div>
         ))}
       </nav>
       <div className="flex md:hidden">
@@ -86,4 +69,6 @@ export function HeaderMenu() {
       </div>
     </div>
   );
-}
+};
+
+export default HeaderMenu;

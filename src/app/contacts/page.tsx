@@ -1,6 +1,6 @@
 import CardContainer from "../components/shared/cardContainer";
-import ContactForm from "./contactForm";
-import ContactInfo from "./contactInfo";
+import ContactForm from "../components/contacts/contactForm";
+import ContactInfo from "../components/contacts/contactInfo";
 
 export default function Contacts() {
   const arrayBuilderSection = [

@@ -4,7 +4,7 @@ import Titre from "../components/shared/titre";
 import { PiPackageFill } from "react-icons/pi";
 import CardContainer from "../components/shared/cardContainer";
 
-export default function Tarifs() {
+const Tarifs = () => {
   const arrayBuilderOffers = [
     {
       id: 1,
@@ -60,4 +60,6 @@ export default function Tarifs() {
       </div>
     </div>
   );
-}
+};
+
+export default Tarifs;

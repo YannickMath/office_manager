@@ -78,13 +78,17 @@ const useServices = () => {
     },
   ];
 
-  const IntroductionItems = ({ items }: any) => {
+  const IntroductionItems = ({
+    items,
+  }: {
+    items: { id: number; label: string }[];
+  }) => {
     return items.map(({ id, label }: { id: number; label: string }) => (
       <p key={id}>{label}</p>
     ));
   };
 
-  const ListItems = ({ list }: any) => {
+  const ListItems = ({ list }: { list: string[] }) => {
     return list.map((item: string, index: number) => (
       <li key={index}>{item}</li>
     ));
@@ -101,7 +105,7 @@ const useServices = () => {
     label: string;
     src: string;
     alt: string;
-    list: any;
+    list: string[];
   }) => {
     return (
       <div

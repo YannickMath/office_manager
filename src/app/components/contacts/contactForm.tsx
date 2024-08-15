@@ -1,40 +1,14 @@
 "use client";
 
 import React from "react";
+
+import useContacts from "@/app/hooks/useContacts";
+
 import { GrValidate } from "react-icons/gr";
-import useContactForm from "../hooks/useContactForm";
 
-export default function ContactForm() {
-  const {
-    result,
-    onSubmit,
-    success,
-    name,
-    setName,
-    email,
-    setEmail,
-    message,
-    setMessage,
-  } = useContactForm();
-
-  const arrayBuilderInputs = [
-    {
-      id: 1,
-      name: "name",
-      type: "text",
-      label: "Nom",
-      value: name,
-      onChange: (e: any) => setName(e.target.value),
-    },
-    {
-      id: 2,
-      name: "email",
-      type: "email",
-      label: "Email",
-      value: email,
-      onChange: (e: any) => setEmail(e.target.value),
-    },
-  ];
+const ContactForm = () => {
+  const { result, onSubmit, success, message, setMessage, arrayBuilderInputs } =
+    useContacts();
 
   const inputContent = arrayBuilderInputs.map(
     ({ id, name, type, label, value, onChange }) => (
@@ -90,4 +64,6 @@ export default function ContactForm() {
       <span className="mt-4 text-green-600">{result}</span>
     </div>
   );
-}
+};
+
+export default ContactForm;

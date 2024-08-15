@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useEffect } from "react";
+
 import "./globals.css";
-import { HeaderMenu } from "./components/headerMenu/headerMenu";
 import Footer from "./components/footer/footer";
 import useLayout from "./hooks/useLayout";
+import HeaderMenu from "./components/headerMenu/headerMenu";
 
 export default function RootLayout({
   children,

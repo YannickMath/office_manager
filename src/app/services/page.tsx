@@ -1,11 +1,11 @@
-import React, { use } from "react";
+import React from "react";
 
 import Titre from "../components/shared/titre";
 import Button from "../components/shared/button";
 import CardContainer from "../components/shared/cardContainer";
 import useServices from "../hooks/useServices";
 
-export default function Services() {
+const Services = () => {
   const { services, introductionItems, IntroductionItems, ServiceSection } =
     useServices();
 
@@ -23,7 +23,7 @@ export default function Services() {
           <Button
             size="normal"
             label="Contactez-moi"
-            url="/contact"
+            url="/contacts"
             color="indigo"
           />
         </div>
@@ -37,4 +37,6 @@ export default function Services() {
       </div>
     </div>
   );
-}
+};
+
+export default Services;

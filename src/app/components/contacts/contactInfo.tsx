@@ -1,15 +1,16 @@
 import React from "react";
+
 import { HiUserCircle, HiLocationMarker } from "react-icons/hi";
 import { AiFillMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
-export default function ContactInfo() {
+const ContactInfo = () => {
   const infoPersonnel = {
     nom: "Cécile BOIRON",
     adresse: "69007 LYON",
     activité: "Office Manager Indépendant",
     email: "omi.cb.contact@gmail.com",
-    téléphone: "06 00 00 00 00 ",
+    téléphone: "06 00 00 00 00",
   };
 
   const { nom, adresse, activité, email, téléphone } = infoPersonnel;
@@ -56,4 +57,6 @@ export default function ContactInfo() {
       </div>
     </div>
   );
-}
+};
+
+export default ContactInfo;

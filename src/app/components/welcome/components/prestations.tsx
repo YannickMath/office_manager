@@ -1,41 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import CardContainer from "../../shared/cardContainer";
+import useWelcome from "@/app/hooks/useWelcome";
 
-export default function Prestations() {
+const Prestations = () => {
   const [windowWidth, setWindowWidth] = useState(0);
-
-  const imagesArray = [
-    {
-      id: "1",
-      label: "Gestion administrative",
-      src: "/gestion_administrative.webp",
-      alt: "secretariat",
-    },
-    {
-      id: "2",
-      label: "Gestion commerciale",
-      src: "/gestion_administrative.webp",
-      alt: "secretariat2",
-    },
-    {
-      id: "3",
-      label: "Gestion du personnel",
-      src: "/gestion_administrative.webp",
-      alt: "secretariat3",
-    },
-    {
-      id: "4",
-      label: "Pré-comptabilité",
-      src: "/gestion_administrative.webp",
-      alt: "secretariat4",
-    },
-  ];
-
   const PrestationsContent = () => {
-    return imagesArray.map(({ id, label, src, alt }) => (
+    const { arrayBuilderImages } = useWelcome();
+    return arrayBuilderImages.map(({ id, label, src, alt }) => (
       <div key={id} className="flex flex-col items-center">
         <Image src={src} alt={alt} width={imageWidth} height={90} />
         <p className="text-center">{label}</p>
@@ -70,4 +45,6 @@ export default function Prestations() {
       </div>
     </CardContainer>
   );
-}
+};
+
+export default Prestations;

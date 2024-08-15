@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-export default function ClickOutside(
+const ClickOutside = (
   ref: React.RefObject<HTMLElement>,
   handler: (event: MouseEvent) => void
-) {
+) => {
   useEffect(() => {
     const listener = (event: MouseEvent) => {
       if (!ref.current || ref.current.contains(event.target as Node)) {
@@ -17,4 +17,6 @@ export default function ClickOutside(
       document.removeEventListener("mousedown", listener);
     };
   }, [ref, handler]);
-}
+};
+
+export default ClickOutside;
