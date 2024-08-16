@@ -11,7 +11,6 @@ const useContacts = () => {
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult("Envoi en cours...");
 
     const accessKey = process.env.NEXT_PUBLIC_WEB_3_FORMS_API_KEY;
     if (!accessKey) {
@@ -35,7 +34,6 @@ const useContacts = () => {
 
       if (response.ok && data.success) {
         setSuccess(true);
-        setResult("Message envoyé avec succès !");
         setTimeout(() => {
           setSuccess(false);
           setResult("");

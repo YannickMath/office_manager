@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import useWelcome from "@/app/hooks/useWelcome";
 import CardContainer from "../shared/cardContainer";
+import Button from "../shared/button";
 
 const Prestations = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -34,7 +35,7 @@ const Prestations = () => {
 
   return (
     <CardContainer width="w-1/2">
-      <div className="flex flex-col items-center gap-12 p-2 mb-10">
+      <div className="flex flex-col items-center gap-12 p-2">
         <div>
           <h2 className="text-2xl">Mes prestations</h2>
         </div>
@@ -44,6 +45,7 @@ const Prestations = () => {
         >
           <PrestationsContent />
         </div>
+        <Button url="/services" label="Voir mes prestations" />
       </div>
     </CardContainer>
   );

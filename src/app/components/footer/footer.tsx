@@ -1,4 +1,5 @@
 import { FooterDataProps } from "@/app/interface/footerInterface";
+import Link from "next/link";
 
 const Footer = () => {
   const data: FooterDataProps = {
@@ -11,6 +12,10 @@ const Footer = () => {
   };
 
   const { name, phone, mail, note, mentions, cgps } = data;
+
+  const handleNavigateToCGPS = () => {
+    // navigate to CGPS page
+  };
 
   return (
     <div
@@ -36,7 +41,12 @@ const Footer = () => {
           <p>{note}</p>
           <div className="flex flex-row items-center justify-center gap-2">
             <p>{mentions}</p>
-            <h2 className="underline text-center">{cgps}</h2>
+            <Link
+              href={"/conditions"}
+              className="underline text-center cursor-pointer hover:text-blue-800"
+            >
+              {cgps}
+            </Link>
           </div>
         </div>
       </div>

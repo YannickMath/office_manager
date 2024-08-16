@@ -93,11 +93,11 @@ const useServices = () => {
   const ListItems = ({ list }: { list: string[] }) => {
     return list.map((item: string, index: number) => (
       <ul key={index} className="flex flex-row items-center gap-2">
-        <TfiHandPointRight /> <li>{item}</li>
+        <TfiHandPointRight className="flex-shrink-0 w-4 h-4" />
+        <li>{item}</li>
       </ul>
     ));
   };
-
   const ServiceSection = ({
     id,
     label,

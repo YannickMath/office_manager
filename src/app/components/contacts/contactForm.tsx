@@ -48,13 +48,20 @@ const ContactForm = () => {
         {messageInput}
         {success ? (
           <div className="flex items-center">
-            <GrValidate color={"green"} />
-            <span className="ml-2 text-green-600">
+            <GrValidate className="w-4 h-4 text-blue-800" />
+            <span className="ml-2 text-blue-800">
               Message envoyé avec succès!
             </span>
           </div>
         ) : (
-          <button type="submit">Envoyer</button>
+          <div className="flex w-full justify-center">
+            <button
+              type="submit"
+              className="border border-blue-800 bg-blue-800 rounded-lg w-1/2 text-white"
+            >
+              Envoyer
+            </button>
+          </div>
         )}
       </form>
       <span className="mt-4 text-green-600">{result}</span>

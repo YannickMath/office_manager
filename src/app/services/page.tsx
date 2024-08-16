@@ -19,7 +19,7 @@ const Services = () => {
         title="Mes services"
         description="Découvrez les services que je propose"
       />
-      <div className="flex flex-col items-center gap-4 p-4">
+      <div className="flex flex-col items-center gap-8 p-4">
         <CardContainer width="w-1/2">
           <IntroductionItems items={introductionItems} />
         </CardContainer>
