@@ -29,8 +29,7 @@ export default function Button({
         className={`${size ? buttonSizeMap[size] : ""}
         ${color ? colorMap[color] : ""}
         text-white text-sm font-bold py-2 px-4 rounded-lg
-        hover:bg-opacity-80 hover:bg-blue-800 transition duration-500 ease-in-out
-        focus:border-2 focus:border-${color}-700 
+        bg-blue-600 hover:bg-blue-900 transition duration-500 ease-in-out
         `}
       >
         {label}

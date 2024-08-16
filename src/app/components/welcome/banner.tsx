@@ -1,4 +1,4 @@
-import Titre from "../../shared/titre";
+import Titre from "../shared/titre";
 
 const Banner = (): JSX.Element => {
   const title = "OFFICE MANAGER INDEPENDANT";

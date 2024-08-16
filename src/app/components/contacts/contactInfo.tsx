@@ -33,7 +33,7 @@ const ContactInfo = () => {
         {arrayBuilderIcons.map(({ id, icon, text }) => {
           return (
             <div key={id} className="flex items-center w-3/4 lg:w-full gap-4 ">
-              <div className="text-purple-700">{icon}</div>
+              <div className="text-blue-800">{icon}</div>
               <div>
                 {id === 3 ? (
                   <a

@@ -1,6 +1,6 @@
 import { GrValidate } from "react-icons/gr";
-import CardContainer from "../../shared/cardContainer";
 import useWelcome from "@/app/hooks/useWelcome";
+import CardContainer from "../shared/cardContainer";
 
 const Pourquoi = () => {
   const { arrayBuilderPourquoiItems } = useWelcome();

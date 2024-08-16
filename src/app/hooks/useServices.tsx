@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TfiHandPointRight } from "react-icons/tfi";
 
 const useServices = () => {
   const introductionItems = [
@@ -21,7 +22,7 @@ const useServices = () => {
     {
       id: 1,
       label: "Gestion administrative",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_administrative.png",
       alt: "secretariat",
       list: [
         "Gestion des mails et du courrier.",
@@ -38,7 +39,7 @@ const useServices = () => {
     {
       id: 2,
       label: "Gestion commerciale",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_commerciale.png",
       alt: "secretariat2",
       list: [
         "Création et mise à jour des fichiers prestataires et fournisseurs.",
@@ -51,14 +52,15 @@ const useServices = () => {
     {
       id: 3,
       label: "Gestion du personnel",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_du_personnel.png",
       alt: "secretariat3",
       list: [
-        "Aide au recrutement: rédaction et diffusion des offres d'emploi ; sélection des candidatures et entretiens.",
+        "Rédaction et diffusion des offres d'emploi.",
+        "Sélection des candidatures et entretiens.",
         "Gestion des contrats de travail (renouvellement période d'essai)",
         "Organisation des plannings (remplacements, congés, absences)",
         "Suivi des dossiers du personnel (visites médicales, formations)",
-        "Tenue des registres du personnel (heures supplémentaires, absences, congés)",
+        "Tenue des registres du personnel (heures, absences, congés)",
         "Reporting des heures mensuelles pour la paie",
         "Accompagnement dans la formation des assistantes",
       ],
@@ -66,10 +68,10 @@ const useServices = () => {
     {
       id: 4,
       label: "Pré-comptabilité",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_pré_comptabilité.png",
       alt: "secretariat4",
       list: [
-        "Classement et transmission des pièces comptables à votre expert-comptable.",
+        "Classement et transmission des pièces comptables à votre expert.",
         "Enregistrement et règlement des factures fournisseurs.",
         "Suivi des notes de frais, rapprochement bancaire.",
         "Suivi de trésorerie.",
@@ -90,7 +92,9 @@ const useServices = () => {
 
   const ListItems = ({ list }: { list: string[] }) => {
     return list.map((item: string, index: number) => (
-      <li key={index}>{item}</li>
+      <ul key={index} className="flex flex-row items-center gap-2">
+        <TfiHandPointRight /> <li>{item}</li>
+      </ul>
     ));
   };
 
@@ -110,13 +114,13 @@ const useServices = () => {
     return (
       <div
         key={id}
-        className="flex flex-col w-full bg-gray-200 p-4 rounded-lg gap-6"
+        className="flex flex-col w-full h-full p-4 rounded-lg gap-6 "
       >
-        <div className="flex flex-row gap-4 items-center justify-center">
+        <div className="flex flex-row w-full gap-6 items-center ">
           <Image src={src} alt={alt} width={100} height={100} />
-          <h2 className="text-2xl font-bold">{label}</h2>
+          <h2 className="w-full text-2xl font-bold text-center">{label}</h2>
         </div>
-        <ul className="flex flex-col gap-1 items-center">
+        <ul className="flex flex-col gap-2 ">
           <ListItems list={list} />
         </ul>
       </div>

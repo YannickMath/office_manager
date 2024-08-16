@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <>
       <html lang="en" className="h-full">
-        <body className="flex flex-col justify-between h-full bg-customBrown">
+        <body className="flex flex-col justify-between h-full">
           <div
-            className={`h-32 sticky top-0 z-10 flex items-center bg-zinc-50 header ${
+            className={`h-32 sticky top-0 z-10 flex items-center header ${
               isTransparent ? "transparent" : ""
             }`}
           >

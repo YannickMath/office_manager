@@ -9,13 +9,13 @@ const HeaderMenu = () => {
     useHeaderMenu();
 
   return (
-    <div className="relative flex flex-row w-full h-full justify-center gap-[10vw] text-xs phone:gap-4 items-center bg-blue-50 p-4">
+    <div className="relative flex flex-row w-full h-full bg-customBrown justify-center gap-[10vw] text-xs phone:gap-4 items-center  p-4">
       <Image src="/LOGO_CB_Noire.png" alt="logo" width={180} height={180} />
       <nav className="hidden md:flex h-full items-center text-xl gap-8">
         {items.map(({ url, label }, index) => (
           <div key={index} className="list-none">
             <Link href={url}>
-              <p className="p-2 rounded-lg transition duration-300 ease-in-out hover:bg-customBrown">
+              <p className="p-2 rounded-lg transition duration-300 ease-in-out hover:bg-customCardBg">
                 {label}
               </p>
             </Link>
@@ -25,7 +25,6 @@ const HeaderMenu = () => {
       <div className="flex md:hidden">
         <button
           id="dropdownDefaultButton"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
           type="button"
           onClick={toggleDropdown}
         >
@@ -52,13 +51,10 @@ const HeaderMenu = () => {
             ref={dropdownRef}
             className="absolute right-0 mt-2 w-44 bg-white divide-y divide-gray-100 rounded-lg shadow z-50"
           >
-            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
+            <ul className="py-2 text-sm">
               {items.map(({ url, label }, index) => (
                 <li key={index} className="list-none">
-                  <Link
-                    href={url}
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
+                  <Link href={url} className="block px-4 py-2 ">
                     <p onClick={closeDropdown}>{label}</p>
                   </Link>
                 </li>

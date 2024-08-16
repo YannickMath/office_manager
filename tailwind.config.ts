@@ -12,10 +12,12 @@ const config: Config = {
         "teamwork-bg": "url('/teamwork.jpg')",
         "efficiency-bg": "url('/efficiency.jpg')",
         "titreJob-bg": "url('/laptop-with-notebook-wooden-table.jpg')",
+        "office-manager-main-bg": "url('/office_manager_main.png')",
       }),
       colors: {
         customBrown: "#d2b697",
         customRose: "#E8AEB7",
+        customCardBg: "rgb(229, 216, 189)",
       },
       screens: {
         mini: { max: "498px" },

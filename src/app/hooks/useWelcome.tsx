@@ -34,25 +34,25 @@ const useWelcome = () => {
     {
       id: "1",
       label: "Gestion administrative",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_administrative.png",
       alt: "secretariat",
     },
     {
       id: "2",
       label: "Gestion commerciale",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_commerciale.png",
       alt: "secretariat2",
     },
     {
       id: "3",
       label: "Gestion du personnel",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_du_personnel.png",
       alt: "secretariat3",
     },
     {
       id: "4",
       label: "Pré-comptabilité",
-      src: "/gestion_administrative.webp",
+      src: "/gestion_pré_comptabilité.png",
       alt: "secretariat4",
     },
   ];

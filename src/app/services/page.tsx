@@ -10,7 +10,11 @@ const Services = () => {
     useServices();
 
   return (
-    <div className="h-full w-full">
+    <div
+      className="h-full w-full py-6
+    bg-office-manager-main-bg bg-cover bg-center bg-no-repeat
+    "
+    >
       <Titre
         title="Mes services"
         description="Découvrez les services que je propose"
@@ -20,14 +24,9 @@ const Services = () => {
           <IntroductionItems items={introductionItems} />
         </CardContainer>
         <div className="flex w-full justify-center">
-          <Button
-            size="normal"
-            label="Contactez-moi"
-            url="/contacts"
-            color="indigo"
-          />
+          <Button size="normal" label="Contactez-moi" url="/contacts" />
         </div>
-        <div className="flex flex-col w-1/2 gap-4">
+        <div className="grid grid-cols-2 w-3/4 gap-4">
           {services.map((service) => (
             <CardContainer key={service.id} width="w-full">
               <ServiceSection key={service.id} {...service} />

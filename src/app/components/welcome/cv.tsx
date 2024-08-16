@@ -1,7 +1,7 @@
 import { FcAssistant } from "react-icons/fc";
-import Button from "../../shared/button";
-import CardContainer from "../../shared/cardContainer";
 import useWelcome from "@/app/hooks/useWelcome";
+import CardContainer from "../shared/cardContainer";
+import Button from "../shared/button";
 
 const Cv = () => {
   const { arrayBuilderCvItems } = useWelcome();
@@ -26,12 +26,7 @@ const Cv = () => {
         </div>
 
         <div className="flex flex-row justify-center">
-          <Button
-            color="indigo"
-            label="Contactez moi"
-            url="/contacts"
-            size="normal"
-          />
+          <Button label="Contactez moi" url="/contacts" size="normal" />
         </div>
       </div>
     </CardContainer>

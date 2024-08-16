@@ -9,18 +9,18 @@ const Tarifs = () => {
     {
       id: 1,
       title: "Tarif horaire",
-      icon: <MdOutlineAvTimer />,
+      icon: <MdOutlineAvTimer className="w-8 h-8" />,
       description: "A partir de 29€ net / heure *",
       note: "TVA non applicable art 293 B du CGI",
-      button: <Button url="" label="Contactez moi" color="indigo" />,
+      button: <Button url="/contacts" label="Contactez moi" />,
     },
     {
       id: 2,
       title: "Forfait",
-      icon: <PiPackageFill />,
+      icon: <PiPackageFill className="w-8 h-8" />,
       description: "Besoin d'une offre adaptée à vos besoins ?",
       note: "Contactez-moi pour un devis personnalisé.",
-      button: <Button url="" label="Demandez un devis" color="indigo" />,
+      button: <Button url="/contacts" label="Demandez un devis" />,
     },
   ];
 
@@ -35,11 +35,17 @@ const Tarifs = () => {
             >
               <div className="flex justify-center items-center gap-4">
                 {icon}
-                <h2>{title}</h2>
+                <h2 className="text-xl">{title}</h2>
               </div>
               <div className="flex flex-col w-full justify-center items-center gap-2">
                 <p>{description}</p>
-                <p className="text-sm">{note}</p>
+                <p
+                  className={`${
+                    id === 2 ? "text-base text-gray-500" : "text-sm"
+                  }`}
+                >
+                  {note}
+                </p>
               </div>
               <div className="flex w-full justify-center">{button}</div>
             </div>
@@ -50,7 +56,11 @@ const Tarifs = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div
+      className="flex flex-col h-full justify-between items-center py-6 
+    bg-office-manager-main-bg bg-cover bg-center bg-no-repeat 
+    "
+    >
       <Titre
         title="Tarifs"
         description="Découvrez les tarifs de mes prestations"

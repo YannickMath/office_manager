@@ -14,8 +14,8 @@ const Footer = () => {
 
   return (
     <div
-      className="flex flex-row justify-center items-center text-base p-4 bg-gray-200
-                phone:text-xs "
+      className="flex flex-row justify-center items-center  p-4 bg-customBrown 
+                phone:text-xs font-bolder"
     >
       <div className="flex flex-row w-1/2 justify-around">
         <div className="flex flex-row w-1/3 justify-center items-center">
@@ -23,7 +23,14 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center justify-center p-2 gap-4">
           <p>{phone}</p>
-          <p>{mail}</p>
+          <p>
+            <a
+              href={`mailto:${mail}`}
+              className="hover:underline hover:text-blue-800"
+            >
+              {mail}
+            </a>
+          </p>
         </div>
         <div className="flex flex-col items-center justify-center p-2 gap-4">
           <p>{note}</p>
