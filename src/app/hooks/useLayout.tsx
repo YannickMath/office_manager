@@ -1,5 +1,4 @@
 // import React, { useState } from "react";
-
 // const useLayout = () => {
 //   const [isTransparent, setIsTransparent] = useState<boolean>(false);
 
