@@ -16,7 +16,7 @@ const Services = () => {
     "
     >
       <Titre
-        title="Mes services"
+        title="Prestations"
         description="Découvrez les services que je propose"
       />
       <div className="flex flex-col items-center gap-8 p-4">

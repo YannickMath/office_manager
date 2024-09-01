@@ -20,7 +20,7 @@ const Tarifs = () => {
       icon: <PiPackageFill className="w-8 h-8" />,
       description: "Besoin d'une offre adaptée à vos besoins ?",
       note: "Contactez-moi pour un devis personnalisé.",
-      button: <Button url="/contacts" label="Demandez un devis" />,
+      button: <Button url="/contacts" label="Demander un devis" />,
     },
   ];
 
@@ -61,10 +61,7 @@ const Tarifs = () => {
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat 
     "
     >
-      <Titre
-        title="Tarifs"
-        description="Découvrez les tarifs de mes prestations"
-      />
+      <Titre title="Tarifs" description="2 offres possibles" />
       <div className="flex flex-row phone:flex-col w-3/4 justify-around items-center py-[6vh] p-2 text-lg gap-8">
         <OffersContent />
       </div>
