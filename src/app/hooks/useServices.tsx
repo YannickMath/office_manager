@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TfiHandPointRight } from "react-icons/tfi";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const useServices = () => {
   const introductionItems = [
@@ -86,14 +86,16 @@ const useServices = () => {
     items: { id: number; label: string }[];
   }) => {
     return items.map(({ id, label }: { id: number; label: string }) => (
-      <p key={id}>{label}</p>
+      <p key={id} className="text-center">
+        {label}
+      </p>
     ));
   };
 
   const ListItems = ({ list }: { list: string[] }) => {
     return list.map((item: string, index: number) => (
       <ul key={index} className="flex flex-row items-center gap-2">
-        <TfiHandPointRight className="flex-shrink-0 w-4 h-4" />
+        <BsArrowRightShort className="flex-shrink-0 w-4 h-4" />
         <li>{item}</li>
       </ul>
     ));
@@ -114,13 +116,22 @@ const useServices = () => {
     return (
       <div
         key={id}
-        className="flex flex-col w-full h-full p-4 rounded-lg gap-6 "
+        className="flex flex-col w-full h-full p-4 rounded-lg gap-6"
+        id={label.replace(/\s+/g, "-").toLowerCase()}
       >
-        <div className="flex flex-row w-full gap-6 items-center ">
-          <Image src={src} alt={alt} width={100} height={100} />
+        <div className="flex flex-row w-full gap-6 items-center">
+          <div className="phone:w-12 phone:h-12 w-24 h-24 relative">
+            <Image
+              src={src}
+              alt={alt}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
           <h2 className="w-full text-2xl font-bold text-center">{label}</h2>
         </div>
-        <ul className="flex flex-col gap-2 ">
+        <ul className="flex flex-col gap-2">
           <ListItems list={list} />
         </ul>
       </div>

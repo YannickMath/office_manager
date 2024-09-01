@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 
 import "./globals.css";
 import Footer from "./components/footer/footer";
-import useLayout from "./hooks/useLayout";
+// import useLayout from "./hooks/useLayout";
 import HeaderMenu from "./components/headerMenu/headerMenu";
 
 export default function RootLayout({
@@ -12,26 +12,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { isTransparent, handleScroll } = useLayout();
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
-
   return (
     <>
-      <html lang="en" className="h-full">
-        <body className="flex flex-col justify-between h-full">
-          <div
-            className={`h-32 sticky top-0 z-10 flex items-center header ${
-              isTransparent ? "transparent" : ""
-            }`}
-          >
+      <html lang="en" className="h-full w-full">
+        <body className="flex flex-col justify-between h-full w-full">
+          <div className="h-32 w-full top-0 z-10 fixed flex items-center header">
             <HeaderMenu />
           </div>
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow mt-32">{children}</main>
           <Footer />
         </body>
       </html>

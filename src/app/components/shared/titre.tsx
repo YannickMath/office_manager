@@ -10,9 +10,9 @@ export default function Titre({ title, description }: TitreProps): JSX.Element {
         className="flex justify-center items-center 
                       shadow-xl border-b border-r border-black p-4 bg-opacity-30"
       >
-        <div className="flex flex-col justify-center gap-8">
-          <h1 className="text-3xl font-bold">{title}</h1>
-          <p className="text-xl">{description}</p>
+        <div className="flex flex-col justify-center gap-8 phone:gap-4">
+          <h1 className="text-3xl phone:text-xl font-bold">{title}</h1>
+          <p className="text-x phone:text-base">{description}</p>
         </div>
       </div>
     </div>

@@ -22,9 +22,9 @@ const Footer = () => {
       className="flex flex-row justify-center items-center  p-4 bg-customBrown 
                 phone:text-xs font-bolder"
     >
-      <div className="flex flex-row w-1/2 justify-around">
+      <div className="flex flex-row w-1/2 phone:w-full justify-around">
         <div className="flex flex-row w-1/3 justify-center items-center">
-          <h1 className="bold">{name}</h1>
+          <h1 className="bold text-center">{name}</h1>
         </div>
         <div className="flex flex-col items-center justify-center p-2 gap-4">
           <p>{phone}</p>

@@ -28,7 +28,7 @@ const Tarifs = () => {
     return arrayBuilderOffers.map(
       ({ id, title, icon, description, note, button }) => (
         <>
-          <CardContainer width="w-1/3 text-nowrap">
+          <CardContainer width="w-2/3 phone:w-full text-nowrap">
             <div
               key={id}
               className="flex flex-col justify-center items-center p-2 font-medium gap-8"
@@ -37,7 +37,7 @@ const Tarifs = () => {
                 {icon}
                 <h2 className="text-xl">{title}</h2>
               </div>
-              <div className="flex flex-col w-full justify-center items-center gap-2">
+              <div className="flex flex-col w-full justify-center items-center gap-2 phone:text-wrap phone:text-center">
                 <p>{description}</p>
                 <p
                   className={`${
@@ -65,7 +65,7 @@ const Tarifs = () => {
         title="Tarifs"
         description="Découvrez les tarifs de mes prestations"
       />
-      <div className="flex flex-row w-3/4 justify-around items-center py-[6vh] p-2 text-lg">
+      <div className="flex flex-row phone:flex-col w-3/4 justify-around items-center py-[6vh] p-2 text-lg gap-8">
         <OffersContent />
       </div>
     </div>

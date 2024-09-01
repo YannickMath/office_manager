@@ -28,9 +28,9 @@ const Pourquoi = () => {
   };
 
   return (
-    <CardContainer width="w-1/2">
+    <CardContainer width="w-1/2 phone:w-3/4">
       <div className="flex flex-col gap-8">
-        <h1 className="text-xl font-bold">
+        <h1 className="text-xl phone:text-lg font-bold text-center">
           Pourquoi faire appel à mes services ?
         </h1>
         <div className="flex flex-col w-full h-1/4 items-start gap-4">
