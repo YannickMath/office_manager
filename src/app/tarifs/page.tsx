@@ -16,7 +16,7 @@ const Tarifs = () => {
     },
     {
       id: 2,
-      title: "Forfait",
+      title: "Pack mission(s)",
       icon: <PiPackageFill className="w-8 h-8" />,
       description: "Besoin d'une offre adaptée à vos besoins ?",
       note: "Contactez-moi pour un devis personnalisé.",
