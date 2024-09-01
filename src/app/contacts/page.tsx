@@ -12,7 +12,7 @@ export default function Contacts() {
     <>
       {arrayBuilderSection.map(({ id, component }) => (
         <div key={id} className="flex w-full justify-center">
-          <CardContainer key={id} width="w-2/3">
+          <CardContainer key={id} width="w-2/3 phone:w-4/5">
             {component}
           </CardContainer>
         </div>

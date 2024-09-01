@@ -84,20 +84,20 @@ const Conditions = () => {
 
   return (
     <div className="flex h-full w-full justify-center py-12">
-      <CardContainer width="w-2/3">
-        <div className="flex flex-col h-full items-center gap-12 p-4">
-          <h1 className="text-xl font-medium">
+      <CardContainer width="w-2/3 phone:w-5/6">
+        <div className="flex flex-col h-full items-center gap-12 p-4 ">
+          <h1 className="text-xl phone:text-lg font-medium text-center">
             Conditions Générales de Presatations de Services
           </h1>
-          <div className="flex flex-col w-2/3 justify-center items-center gap-6">
+          <div className="flex flex-col w-2/3 phone:w-full justify-center items-center gap-6 phone:text-sm">
             {termsAndConditions.map(({ id, title, content }) => (
-              <div key={id} className="flex flex-col gap-2">
-                <div className="flex flex-row items-center underline  font-medium">
+              <div key={id} className="flex flex-col">
+                <div className="flex flex-row items-center underline font-medium ">
                   <h2>{id}.</h2>
 
-                  <h2>{title}</h2>
+                  <h2 className="phone:text-nowrap">{title}</h2>
                 </div>
-                <p>{content}</p>
+                <p className="phone:text-xs phone:p-2">{content}</p>
               </div>
             ))}
           </div>

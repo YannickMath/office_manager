@@ -94,7 +94,10 @@ const useServices = () => {
 
   const ListItems = ({ list }: { list: string[] }) => {
     return list.map((item: string, index: number) => (
-      <ul key={index} className="flex flex-row items-center gap-2">
+      <ul
+        key={index}
+        className="flex flex-row items-center gap-2 phone:text-sm"
+      >
         <BsArrowRightShort className="flex-shrink-0 w-4 h-4" />
         <li>{item}</li>
       </ul>
@@ -119,7 +122,7 @@ const useServices = () => {
         className="flex flex-col w-full h-full p-4 rounded-lg gap-6"
         id={label.replace(/\s+/g, "-").toLowerCase()}
       >
-        <div className="flex flex-row w-full gap-6 items-center">
+        <div className="flex flex-row phone:flex-col w-full gap-6 items-center">
           <div className="phone:w-12 phone:h-12 w-24 h-24 relative">
             <Image
               src={src}
@@ -129,7 +132,9 @@ const useServices = () => {
               className="rounded-lg"
             />
           </div>
-          <h2 className="w-full text-2xl font-bold text-center">{label}</h2>
+          <h2 className="w-full text-2xl phone:text-lg font-bold text-center">
+            {label}
+          </h2>
         </div>
         <ul className="flex flex-col gap-2">
           <ListItems list={list} />

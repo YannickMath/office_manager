@@ -21,3 +21,7 @@ body {
 .fonduBleuLogo {
   background-color: #3d8cc4;
 }
+
+[id] {
+  scroll-margin-top: 80px; /* Ajustez la valeur selon vos besoins */
+}

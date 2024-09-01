@@ -10,7 +10,7 @@ const Pourquoi = () => {
   }) => (
     <div
       key={id}
-      className="flex flex-row w-full justify-center items-center gap-6 text-base"
+      className="flex flex-row w-full justify-center items-center gap-6 text-base phone:text-sm"
     >
       <div className="flexs">
         <GrValidate className="w-6 h-6" />
@@ -30,7 +30,7 @@ const Pourquoi = () => {
   return (
     <CardContainer width="w-1/2 phone:w-3/4">
       <div className="flex flex-col gap-8">
-        <h1 className="text-xl phone:text-lg font-bold text-center">
+        <h1 className="text-xl phone:text-base font-bold text-center">
           Pourquoi faire appel à mes services ?
         </h1>
         <div className="flex flex-col w-full h-1/4 items-start gap-4">

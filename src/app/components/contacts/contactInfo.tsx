@@ -10,7 +10,7 @@ const ContactInfo = () => {
     adresse: "69007 LYON",
     activité: "Office Manager Indépendant",
     email: "omi.cb.contact@gmail.com",
-    téléphone: "06 00 00 00 00",
+    téléphone: "06 21 89 91 32",
   };
 
   const { nom, adresse, activité, email, téléphone } = infoPersonnel;
@@ -23,7 +23,7 @@ const ContactInfo = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-6 text-lg">
+    <div className="flex flex-col gap-6 text-lg phone:text-base">
       <div className="flex flex-col">
         <div className="w-3/4 lg:w-full">
           <p>{activité}</p>

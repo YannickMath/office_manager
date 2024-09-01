@@ -28,7 +28,7 @@ export default function Button({
         type="button"
         className={`${size ? buttonSizeMap[size] : ""}
         ${color ? colorMap[color] : ""}
-        text-white text-sm font-bold py-2 px-4 rounded-lg
+        text-white text-sm phone:text-xs font-bold py-2 px-4 rounded-lg
         bg-blue-600 hover:bg-blue-900 transition duration-500 ease-in-out
         `}
       >

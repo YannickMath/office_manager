@@ -3,7 +3,7 @@ const useWelcome = () => {
     {
       id: 1,
       label:
-        "Bonjour, je suis Cécile Boiron, ancienne ADQ, avec de 15 ans d'expérience en cabinet dentaire, je dispose d'un riche parcours professionnel qui m'apporte aujourd'hui de solides compétences sur de multiples aspects de la gestion dans un cabinet dentaire",
+        "Bonjour, je suis Cécile Boiron, ancienne assistante dentaire qualifiée, avec une vingtaine d'années d'expérience auprès des chirurgiens dentistes. Je dispose d'un riche parcours professionnel qui m'apporte aujourd'hui de solides compétences sur de multiples aspects de la gestion dans un cabinet dentaire",
     },
     {
       id: 2,

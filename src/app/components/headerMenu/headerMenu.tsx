@@ -28,7 +28,7 @@ const HeaderMenu = () => {
           type="button"
           onClick={toggleDropdown}
         >
-          Menu
+          <p className="phone:text-lg">Menu</p>
           <svg
             className="w-2.5 h-2.5 ml-2.5"
             aria-hidden="true"

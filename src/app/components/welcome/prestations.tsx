@@ -19,7 +19,7 @@ const Prestations = () => {
       >
         <div className="flex flex-col items-center gap-2 cursor-pointer">
           <Image src={src} alt={alt} width={imageWidth} height={90} />
-          <p className="text-center text-gray-700 text-lg font-bolder underline">
+          <p className="text-center text-gray-700 text-lg phone:text-base font-bolder underline">
             {label}
           </p>
         </div>
@@ -41,9 +41,9 @@ const Prestations = () => {
 
   return (
     <CardContainer width="w-1/2 phone:w-3/4 phone:mb-6">
-      <div className="flex flex-col items-center gap-12 p-2">
+      <div className="flex flex-col items-center gap-12 phone:gap-6 p-2">
         <div>
-          <h2 className="text-2xl">Mes prestations</h2>
+          <h2 className="text-2xl phone:text-xl">Mes prestations</h2>
         </div>
         <div
           className="flex flex-row gap-4

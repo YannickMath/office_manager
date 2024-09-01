@@ -7,12 +7,20 @@ import useContacts from "@/app/hooks/useContacts";
 import { GrValidate } from "react-icons/gr";
 
 const ContactForm = () => {
-  const { result, onSubmit, success, message, setMessage, arrayBuilderInputs } =
-    useContacts();
+  const {
+    name,
+    email,
+    result,
+    onSubmit,
+    success,
+    message,
+    setMessage,
+    arrayBuilderInputs,
+  } = useContacts();
 
   const inputContent = arrayBuilderInputs.map(
     ({ id, name, type, label, value, onChange }) => (
-      <div key={id} className="flex flex-col w-1/2 rounded-lg">
+      <div key={id} className="flex flex-col w-1/2 phone:w-full rounded-lg">
         <label htmlFor={name}>{label}</label>
         <input
           id={name}
@@ -21,7 +29,6 @@ const ContactForm = () => {
           value={value}
           autoComplete="off"
           onChange={onChange}
-          required
         />
       </div>
     )
@@ -36,13 +43,12 @@ const ContactForm = () => {
         value={message}
         className="h-40"
         onChange={(e) => setMessage(e.target.value)}
-        required
       ></textarea>
     </div>
   );
 
   return (
-    <div className="w-1/2">
+    <div className="w-1/2 phone:w-4/5">
       <form onSubmit={onSubmit} className="flex flex-col justify-center gap-4">
         {inputContent}
         {messageInput}
@@ -57,7 +63,9 @@ const ContactForm = () => {
           <div className="flex w-full justify-center">
             <button
               type="submit"
-              className="border border-blue-800 bg-blue-800 rounded-lg w-1/2 text-white"
+              className="border border-blue-800 bg-blue-800 rounded-lg w-1/2 text-white 
+              disabled:bg-gray-400 disabled:border-gray-400"
+              disabled={message?.length === 0 || !name || !email}
             >
               Envoyer
             </button>
