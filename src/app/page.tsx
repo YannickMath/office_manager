@@ -8,7 +8,7 @@ export default function Home() {
     <div
       className="flex flex-col w-full h-full justify-center items-center gap-10 py-6
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat
-    phone:bg-contain phone:bg-bottom phone:bg-repeat"
+    phone:bg-contain phone:bg-bottom phone:bg-gray-200 "
     >
       <div className="w-full">
         <Banner />

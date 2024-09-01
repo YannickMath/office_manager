@@ -5,14 +5,20 @@ interface TitreProps {
 
 export default function Titre({ title, description }: TitreProps): JSX.Element {
   return (
-    <div className=" flex flex-col w-full h-[150px] justify-center items-center p-8 text-center gap-10">
+    <div
+      className=" flex flex-col w-full h-[150px] justify-center items-center p-8 text-center gap-10
+    "
+    >
       <div
         className="flex justify-center items-center 
-                      shadow-xl border-b border-r border-black p-4 bg-opacity-30"
+                  shadow-xl border-b border-r border-black p-4 bg-opacity-30
+                  phone:bg-office-manager-main-bg phone:bg-cover phone:bg-no-repeat phone:bg-center phone:bg-opacity-20"
       >
         <div className="flex flex-col justify-center gap-8 phone:gap-4">
           <h1 className="text-3xl phone:text-xl font-bold">{title}</h1>
-          <p className="text-x phone:text-base">{description}</p>
+          <p className="text-x phone:text-base phone:font-bolder">
+            {description}
+          </p>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@ const config: Config = {
       backgroundImage: (theme) => ({
         "teamwork-bg": "url('/teamwork.jpg')",
         "efficiency-bg": "url('/efficiency.jpg')",
+        "assistante-bg": "url('/dessin_assistante_1.jpg')",
         "titreJob-bg": "url('/laptop-with-notebook-wooden-table.jpg')",
         "office-manager-main-bg": "url('/office_manager_main.png')",
       }),
