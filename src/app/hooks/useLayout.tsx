@@ -9,7 +9,6 @@
 //       setIsTransparent(false);
 //     }
 //   };
-
 //   return {
 //     isTransparent,
 //     handleScroll,
