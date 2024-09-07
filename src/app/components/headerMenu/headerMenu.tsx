@@ -54,7 +54,7 @@ const HeaderMenu = () => {
           </div>
         ))}
       </nav>
-      <div className="flex md:hidden flex-col h-full items-center justify-center">
+      <div className="flex md:hidden flex-col h-full items-center justify-around">
         <button
           id="dropdownDefaultButton"
           type="button"
