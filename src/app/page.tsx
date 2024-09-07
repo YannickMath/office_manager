@@ -10,7 +10,7 @@ export default function Home() {
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat
     phone:bg-contain phone:bg-bottom phone:bg-gray-200 "
     >
-      <div className="w-full">
+      <div className="w-full mt-4">
         <Banner />
       </div>
       <div className="flex w-full justify-center">
@@ -19,7 +19,7 @@ export default function Home() {
       <div className="flex w-full justify-center">
         <Cv />
       </div>
-      <div className="flex w-full justify-center mb-10">
+      <div className="flex w-full justify-center">
         <Prestations />
       </div>
     </div>

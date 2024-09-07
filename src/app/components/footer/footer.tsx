@@ -1,5 +1,6 @@
 import { FooterDataProps } from "@/app/interface/footerInterface";
 import Link from "next/link";
+import { FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   const data: FooterDataProps = {
@@ -29,12 +30,14 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center p-2 gap-4">
           <p>{phone}</p>
           <p>
-            <a
+            <Link
               href={`mailto:${mail}`}
-              className="hover:underline hover:text-blue-800"
+              className="flex items-center gap-2 hover:underline hover:text-blue-800"
             >
-              {mail}
-            </a>
+              {/* Icône d'enveloppe avec le label "Mail Me" */}
+              <FaEnvelope />
+              <span>Mail Me</span>
+            </Link>
           </p>
         </div>
         <div className="flex flex-col items-center justify-center p-2 gap-4">
