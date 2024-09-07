@@ -26,7 +26,10 @@ export default function Titre({ title, description }: TitreProps): JSX.Element {
     >
       <div
         className="flex justify-center items-center w-4/5
-                  shadow-xl border-b border-r border-black p-4 bg-opacity-30"
+                  shadow-xl border-b border-r border-black p-4 bg-opacity-30
+      phone:bg-office-manager-main-bg phone:bg-cover phone:bg-no-repeat phone:bg-center phone:text-white
+                  
+                  "
       >
         <div className="flex flex-col justify-center gap-8 phone:gap-4">
           <h1 className="text-3xl phone:text-xl font-bold">{title}</h1>

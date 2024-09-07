@@ -12,7 +12,7 @@ const useWelcome = () => {
     },
     {
       id: 3,
-      label: "Ma priorité: votre satifsaction et celle de vos patients !",
+      label: "Ma priorité: votre satisfaction et celle de vos patients !",
     },
     {
       id: 4,

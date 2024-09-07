@@ -87,7 +87,7 @@ const Conditions = () => {
       <CardContainer width="w-2/3 phone:w-5/6">
         <div className="flex flex-col h-full items-center gap-12 p-4 ">
           <h1 className="text-xl phone:text-lg font-medium text-center">
-            Conditions Générales de Presatations de Services
+            Conditions Générales de Prestations de Services
           </h1>
           <div className="flex flex-col w-2/3 phone:w-full justify-center items-center gap-6 phone:text-sm">
             {termsAndConditions.map(({ id, title, content }) => (

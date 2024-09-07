@@ -18,7 +18,7 @@ const useHeaderMenu = () => {
 
   const items: ItemProps[] = [
     { label: "Accueil", url: "/" },
-    { label: "Services", url: "/services" },
+    { label: "Prestations", url: "/services" },
     { label: "Tarifs", url: "/tarifs" },
     { label: "Contact", url: "/contacts" },
   ];
