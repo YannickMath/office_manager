@@ -1,6 +1,7 @@
 import CardContainer from "../components/shared/cardContainer";
 import ContactForm from "../components/contacts/contactForm";
 import ContactInfo from "../components/contacts/contactInfo";
+import Titre from "../components/shared/titre";
 
 export default function Contacts() {
   const arrayBuilderSection = [
@@ -25,6 +26,7 @@ export default function Contacts() {
       className="flex flex-col h-full w-full justify-center items-center p-2 py-4 gap-6
         bg-office-manager-main-bg bg-cover bg-center bg-no-repeat"
     >
+      {/* <Titre title="Contacts" /> */}
       <ArrayBuilderContent />
     </div>
   );

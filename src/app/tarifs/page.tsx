@@ -61,7 +61,7 @@ const Tarifs = () => {
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat 
     "
     >
-      <Titre title="Tarifs" description="2 offres possibles" />
+      {/* <Titre title="Tarifs" /> */}
       <div className="flex flex-row phone:flex-col w-3/4 justify-around items-center py-[6vh] p-2 text-lg gap-8">
         <OffersContent />
       </div>

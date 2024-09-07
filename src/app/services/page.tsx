@@ -15,10 +15,10 @@ const Services = () => {
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat
     "
     >
-      <Titre
+      {/* <Titre
         title="Prestations"
-        description="Découvrez les services que je propose"
-      />
+        // description="Découvrez les services que je propose"
+      /> */}
       <div className="flex flex-col items-center gap-8 p-4">
         <CardContainer width="w-1/2 phone:w-full" bgColor="bg-grey-250">
           <IntroductionItems items={introductionItems} />
