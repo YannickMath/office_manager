@@ -43,7 +43,11 @@ const HeaderMenu = () => {
         {items.map(({ url, label }, index) => (
           <div key={index} className="list-none">
             <Link href={url}>
-              <p className="p-2 rounded-lg transition duration-300 ease-in-out hover:bg-customCardBg">
+              <p
+                className={`p-2 rounded-lg transition duration-300 ease-in-out hover:bg-customCardBg
+                  ${pathname === url ? "bg-customCardBg" : ""}
+                  `}
+              >
                 {label}
               </p>
             </Link>
