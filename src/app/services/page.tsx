@@ -11,7 +11,7 @@ const Services = () => {
 
   return (
     <div
-      className="h-full w-full py-6
+      className="h-full w-full
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat
     "
     >
@@ -19,7 +19,7 @@ const Services = () => {
         title="Prestations"
         // description="Découvrez les services que je propose"
       /> */}
-      <div className="flex flex-col items-center gap-8 p-4">
+      <div className="flex flex-col items-center gap-8 p-2">
         <CardContainer width="w-1/2 phone:w-full" bgColor="bg-grey-250">
           <IntroductionItems items={introductionItems} />
         </CardContainer>

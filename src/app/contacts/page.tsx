@@ -23,7 +23,7 @@ export default function Contacts() {
 
   return (
     <div
-      className="flex flex-col h-full w-full justify-center items-center p-2 py-4 gap-6
+      className="flex flex-col h-full w-full justify-center items-center p-2 py-8 gap-6
         bg-office-manager-main-bg bg-cover bg-center bg-no-repeat"
     >
       {/* <Titre title="Contacts" /> */}

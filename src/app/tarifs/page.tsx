@@ -57,7 +57,7 @@ const Tarifs = () => {
 
   return (
     <div
-      className="flex flex-col h-full justify-between items-center py-6 
+      className="flex flex-col h-full justify-between items-center
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat 
     "
     >
