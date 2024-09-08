@@ -39,7 +39,7 @@ const HeaderMenu = () => {
   return (
     <div className="relative flex flex-row w-full h-full bg-customBrown justify-center text-xs phone:gap-8 items-center p-4">
       <Image src="/LOGO_CB_Noire.png" alt="logo" width={180} height={180} />
-      <nav className="hidden lg:flex h-full items-center phone:text-xl text-2xl phone:gap-8 gap-14 phone:ml-0 ml-[10%]">
+      <nav className="hidden md:flex h-full items-center phone:text-xl text-2xl gap-8 phone:ml-0 ml-[10%]">
         {items.map(({ url, label }, index) => (
           <div key={index} className="list-none">
             <Link href={url}>
@@ -54,7 +54,7 @@ const HeaderMenu = () => {
           </div>
         ))}
       </nav>
-      <div className="flex lg:hidden flex-col h-full phone:w-1/4 items-start justify-around">
+      <div className="flex md:hidden flex-col h-full phone:w-1/4 items-start justify-around">
         <button
           id="dropdownDefaultButton"
           type="button"

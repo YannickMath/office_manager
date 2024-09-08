@@ -13,6 +13,7 @@ const Services = () => {
     <div
       className="h-full w-full
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat
+    phone:bg-contain phone:bg-bottom phone:bg-gray-200
     "
     >
       {/* <Titre
