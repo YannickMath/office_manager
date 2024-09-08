@@ -1,58 +1,55 @@
-import { FooterDataProps } from "@/app/interface/footerInterface";
-import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
+import Conditions from "@/app/conditions/page";
 
-const Footer = () => {
-  const data: FooterDataProps = {
+interface FooterProps {
+  isCgpsOpen: boolean;
+  onToggleCgps: () => void;
+}
+
+const Footer = ({ isCgpsOpen, onToggleCgps }: FooterProps) => {
+  const data = {
     name: "OMI GESTION",
     phone: "06 21 89 91 32",
     mail: "omi.cb.contact@gmail.com",
-    note: "Politique de confidentialité",
     mentions: "Mentions légales",
     cgps: "CGPS",
   };
 
-  const { name, phone, mail, note, mentions, cgps } = data;
-
-  const handleNavigateToCGPS = () => {
-    // navigate to CGPS page
-  };
+  const { name, phone, mail, mentions, cgps } = data;
 
   return (
-    <div
-      className="flex flex-row justify-center items-center  p-4 bg-customBrown 
-                phone:text-xs font-bolder"
-    >
-      <div className="flex flex-row w-1/2 phone:w-full justify-around">
-        <div className="flex flex-row w-1/3 justify-center items-center">
-          <h1 className="bold text-center">{name}</h1>
-        </div>
-        <div className="flex flex-col items-center justify-center p-2 gap-4">
-          <p>{phone}</p>
-          <p>
-            <Link
-              href={`mailto:${mail}`}
-              className="flex items-center gap-2 hover:underline hover:text-blue-800"
-            >
-              {/* Icône d'enveloppe avec le label "Mail Me" */}
-              <FaEnvelope />
-              <span>Mail Me</span>
-            </Link>
-          </p>
-        </div>
-        <div className="flex flex-col items-center justify-center p-2 gap-4">
-          <p>{note}</p>
-          <div className="flex flex-row items-center justify-center gap-2">
+    <div className="relative">
+      <div className="flex flex-row justify-center items-center p-4 bg-customBrown phone:text-xs font-bolder">
+        <div className="flex flex-row w-1/2 phone:w-full justify-around">
+          <div className="flex flex-row w-1/3 justify-center items-center">
+            <h1 className="bold text-center">{name}</h1>
+          </div>
+          <div className="flex flex-col items-center justify-center p-2 gap-4 text-blue-800">
+            <p>{phone}</p>
+            <p>
+              <a
+                href={`mailto:${mail}`}
+                className="flex items-center gap-2 hover:underline"
+              >
+                <FaEnvelope color="blue" />
+                <span className="">Mail Me</span>
+              </a>
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center p-2 gap-4">
             <p>{mentions}</p>
-            <Link
-              href={"/conditions"}
-              className="underline text-center cursor-pointer hover:text-blue-800"
-            >
-              {cgps}
-            </Link>
+            <div className="flex flex-row items-center justify-center gap-2">
+              <p
+                className="text-center cursor-pointer hover:underline"
+                onClick={onToggleCgps}
+              >
+                {cgps}
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      {isCgpsOpen && <Conditions onClose={onToggleCgps} />}
     </div>
   );
 };

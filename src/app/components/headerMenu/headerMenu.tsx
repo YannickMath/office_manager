@@ -37,7 +37,7 @@ const HeaderMenu = () => {
   };
 
   return (
-    <div className="relative flex flex-row w-full h-full bg-customBrown justify-center gap-[10vw] text-xs phone:gap-4 items-center p-4">
+    <div className="relative flex flex-row w-full h-full bg-customBrown justify-center text-xs phone:gap-8 items-center p-4">
       <Image src="/LOGO_CB_Noire.png" alt="logo" width={180} height={180} />
       <nav className="hidden md:flex h-full items-center text-xl gap-8">
         {items.map(({ url, label }, index) => (
@@ -54,7 +54,7 @@ const HeaderMenu = () => {
           </div>
         ))}
       </nav>
-      <div className="flex md:hidden flex-col h-full items-center justify-around">
+      <div className="flex md:hidden flex-col h-full phone:w-1/4 items-start justify-around">
         <button
           id="dropdownDefaultButton"
           type="button"

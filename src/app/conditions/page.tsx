@@ -1,6 +1,9 @@
-import CardContainer from "../components/shared/cardContainer";
+"use client";
 
-const Conditions = () => {
+import { useEffect } from "react";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+
+const Conditions = ({ onClose }: any) => {
   const termsAndConditions = [
     {
       id: 1,
@@ -82,27 +85,50 @@ const Conditions = () => {
     },
   ];
 
-  return (
-    <div className="flex h-full w-full justify-center py-12">
-      <CardContainer width="w-2/3 phone:w-5/6">
-        <div className="flex flex-col h-full items-center gap-12 p-4 ">
-          <h1 className="text-xl phone:text-lg font-medium text-center">
-            Conditions Générales de Prestations de Services
-          </h1>
-          <div className="flex flex-col w-2/3 phone:w-full justify-center items-center gap-6 phone:text-sm">
-            {termsAndConditions.map(({ id, title, content }) => (
-              <div key={id} className="flex flex-col">
-                <div className="flex flex-row items-center underline font-medium ">
-                  <h2>{id}.</h2>
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
 
-                  <h2 className="phone:text-nowrap">{title}</h2>
-                </div>
-                <p className="phone:text-xs phone:p-2">{content}</p>
-              </div>
-            ))}
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [onClose]);
+
+  return (
+    <div className="fixed inset-0 flex items-center justify-center z-50">
+      {/* Overlay avec effet blur */}
+      <div className="absolute inset-0 bg-black opacity-50" onClick={onClose} />
+
+      {/* Contenu de la modal */}
+      <div className="relative bg-white w-3/4 h-[90%] rounded-lg shadow-lg z-50">
+        {/* Titre et icône de fermeture */}
+        <div className="flex justify-between items-center p-4">
+          <h2 className="text-xl phone:text-base font-bold text-center flex-grow">
+            Conditions Générales de Prestations de Services
+          </h2>
+          <div
+            className="cursor-pointer text-gray-500 hover:text-gray-700"
+            onClick={onClose}
+          >
+            <IoIosCloseCircleOutline className="w-10 h-10 phone:w-6 phone:h-6" />
           </div>
         </div>
-      </CardContainer>
+        <div className="overflow-y-auto h-[90%] px-8 py-4  phone:text-sm">
+          {termsAndConditions.map(({ id, title, content }) => (
+            <div key={id} className="flex flex-col py-4">
+              <div className="flex flex-row items-center underline font-medium">
+                <h2>{id}.</h2>
+                <h2 className="ml-2">{title}</h2>
+              </div>
+              <p className="mt-2">{content}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
