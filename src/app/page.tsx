@@ -10,7 +10,7 @@ export default function Home() {
     bg-office-manager-main-bg bg-cover bg-center bg-no-repeat
     phone:bg-contain phone:bg-bottom phone:bg-gray-200 "
     >
-      <div className="w-full mt-4">
+      <div className="w-full">
         <Banner />
       </div>
       <div className="flex w-full justify-center">

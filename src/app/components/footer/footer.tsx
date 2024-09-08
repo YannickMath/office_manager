@@ -24,7 +24,7 @@ const Footer = ({ isCgpsOpen, onToggleCgps }: FooterProps) => {
           <div className="flex flex-row w-1/3 justify-center items-center">
             <h1 className="bold text-center">{name}</h1>
           </div>
-          <div className="flex flex-col items-center justify-center p-2 gap-4 text-blue-800">
+          <div className="flex flex-col w-1/3 items-center justify-center p-2 gap-4 text-blue-800">
             <p>{phone}</p>
             <p>
               <a
@@ -36,9 +36,9 @@ const Footer = ({ isCgpsOpen, onToggleCgps }: FooterProps) => {
               </a>
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center p-2 gap-4">
+          <div className="flex flex-col w-1/3 items-center justify-center p-2 gap-4">
             <p>{mentions}</p>
-            <div className="flex flex-row items-center justify-center gap-2">
+            <div className="flex flex-row items-center justify-center gap-2 text-blue-800">
               <p
                 className="text-center cursor-pointer hover:underline"
                 onClick={onToggleCgps}

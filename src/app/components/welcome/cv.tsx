@@ -10,7 +10,10 @@ const Cv = () => {
   const Items = () => (
     <>
       {arrayBuilderCvItems.map(({ id, label, image }) => (
-        <div key={id} className={`flex phone:flex-col flex-row gap-4`}>
+        <div
+          key={id}
+          className={`flex phone:flex-col flex-row items-center gap-4`}
+        >
           {image && (
             <div className="w-full flex justify-center items-center">
               <div className="flex items-center justify-center phone:h-64 phone:w-36 relative h-56 w-24">
@@ -24,7 +27,7 @@ const Cv = () => {
               </div>
             </div>
           )}
-          <p className="mt-6">{label}</p>
+          <p>{label}</p>
         </div>
       ))}
     </>

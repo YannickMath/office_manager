@@ -19,9 +19,7 @@ export default function Titre({ title, description }: TitreProps): JSX.Element {
   }, []);
   return (
     <div
-      className={`flex flex-col w-full ${
-        isRootPath ? "h-[180px]" : "h-[100px]"
-      } justify-end items-center phone:p-2 p-8 text-center gap-10`}
+      className={`flex flex-col w-full  justify-end items-center phone:p-2 p-8 text-center gap-10`}
     >
       <div className="relative flex justify-center items-center w-4/5 shadow-xl border-b border-r border-black p-4 phone:bg-office-manager-main-bg phone:bg-cover phone:bg-no-repeat phone:bg-center">
         {/* Overlay semi-transparent */}

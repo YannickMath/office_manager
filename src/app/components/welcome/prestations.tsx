@@ -37,7 +37,7 @@ const Prestations = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const imageWidth = windowWidth < 899 ? 90 : 180;
+  const imageWidth = windowWidth < 899 ? 90 : 140;
 
   return (
     <CardContainer width="w-1/2 phone:w-3/4 phone:mb-6">
@@ -47,7 +47,7 @@ const Prestations = () => {
         </div>
         <div
           className="flex flex-row gap-4
-        phone:flex-col phone:items-center"
+        laptop:flex-col laptop:items-center"
         >
           <PrestationsContent />
         </div>
