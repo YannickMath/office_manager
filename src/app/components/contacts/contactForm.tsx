@@ -29,6 +29,7 @@ const ContactForm = () => {
           value={value}
           autoComplete="off"
           onChange={onChange}
+          className="p-2"
         />
       </div>
     )
@@ -41,7 +42,7 @@ const ContactForm = () => {
         id="message"
         name="message"
         value={message}
-        className="h-40"
+        className="h-40 p-2"
         onChange={(e) => setMessage(e.target.value)}
       ></textarea>
     </div>

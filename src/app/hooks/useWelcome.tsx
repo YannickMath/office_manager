@@ -6,13 +6,6 @@ const useWelcome = () => {
       id: 1,
       label:
         "Bonjour, je suis Cécile Boiron, ancienne assistante dentaire qualifiée, avec une vingtaine d'années d'expérience auprès des chirurgiens dentistes. Je dispose d'un riche parcours professionnel qui m'apporte aujourd'hui de solides compétences sur de multiples aspects de la gestion dans un cabinet dentaire.",
-      image: {
-        src: "/cecile2.png",
-        layout: "fill",
-        objectFit: "cover",
-        alt: "Cécile Boiron",
-        className: "rounded-lg",
-      },
     },
     {
       id: 2,

@@ -86,7 +86,7 @@ const useServices = () => {
     items: { id: number; label: string }[];
   }) => {
     return items.map(({ id, label }: { id: number; label: string }) => (
-      <p key={id} className="text-center">
+      <p key={id} className="flex flex-col h-full text-center">
         {label}
       </p>
     ));

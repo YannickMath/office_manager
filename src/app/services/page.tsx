@@ -16,12 +16,12 @@ const Services = () => {
     phone:bg-contain phone:bg-bottom phone:bg-gray-200
     "
     >
-      {/* <Titre
-        title="Prestations"
-        // description="Découvrez les services que je propose"
-      /> */}
-      <div className="flex flex-col items-center gap-8 phone:gap-4 p-2 phone:p-6 py-4 phone:py-0">
-        <CardContainer width="w-1/2 phone:w-full" bgColor="bg-grey-250">
+      <div className="flex flex-col items-center gap-12 phone:gap-4 p-2 phone:p-6 py-4 phone:py-0">
+        <CardContainer
+          width="flex flex-col w-1/2 phone:w-full"
+          bgColor="bg-gray-200 bg-opacity-70 shadow-lg"
+          className="text-xl font-bolder mt-4 phone:mt-0"
+        >
           <IntroductionItems items={introductionItems} />
         </CardContainer>
         <div className="flex w-full justify-center">

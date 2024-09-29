@@ -22,7 +22,7 @@ const HeaderMenu = () => {
 
   useEffect(() => {
     setActivePage(newActiveItem ? newActiveItem.label : "Accueil");
-  }, [pathname, items]);
+  }, [pathname, items, newActiveItem]);
 
   const GetActiveLabel = () => {
     return (

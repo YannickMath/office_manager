@@ -3,6 +3,7 @@ import Button from "../components/shared/button";
 import Titre from "../components/shared/titre";
 import { PiPackageFill } from "react-icons/pi";
 import CardContainer from "../components/shared/cardContainer";
+import Image from "next/image"; // Import the Image component from the correct package
 
 const Tarifs = () => {
   const arrayBuilderOffers = [
@@ -28,20 +29,22 @@ const Tarifs = () => {
     return arrayBuilderOffers.map(
       ({ id, title, icon, description, note, button }) => (
         <>
-          <CardContainer width="w-2/3 h-3/5 phone:w-full">
+          <CardContainer width="w-3/4 h-1/2 phone:w-full">
             <div
               key={id}
               className="flex flex-col justify-center items-center p-2 font-medium gap-8"
             >
               <div className="flex justify-center items-center gap-4">
                 {icon}
-                <h2 className="text-xl">{title}</h2>
+                <h2 className="text-2xl phone:text-xl">{title}</h2>
               </div>
-              <div className="flex flex-col w-full justify-center items-center gap-2 photext-wrap text-center">
-                <p>{description}</p>
+              <div className="flex flex-col w-full justify-center items-center gap-2 phone:text-wrap text-center">
+                <p className="text-lg ">{description}</p>
                 <p
                   className={`${
-                    id === 2 ? "text-base text-gray-500" : "text-sm"
+                    id === 2
+                      ? "text-lg text-gray-500"
+                      : "text-base phone:text-sm"
                   }`}
                 >
                   {note}
@@ -56,13 +59,17 @@ const Tarifs = () => {
   };
 
   return (
-    <div
-      className="flex flex-col h-full justify-between items-center phone:py-4
-    bg-office-manager-main-bg bg-cover bg-center bg-no-repeat 
-    "
-    >
-      {/* <Titre title="Tarifs" /> */}
-      <div className="flex flex-row phone:flex-col w-3/4 h-full justify-around items-center p-2 text-lg gap-8">
+    <div className="relative flex flex-col h-full justify-between items-center phone:py-4">
+      <Image
+        src="/office_manager_main.png"
+        layout="fill"
+        objectFit="cover"
+        alt="Office background"
+        priority
+        className="z-[-1]"
+      />
+
+      <div className="relative z-1 flex flex-row laptop:flex-col w-3/4 h-full justify-around items-center p-2 gap-8">
         <OffersContent />
       </div>
     </div>

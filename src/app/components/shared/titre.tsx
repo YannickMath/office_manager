@@ -11,7 +11,6 @@ export default function Titre({ title, description }: TitreProps): JSX.Element {
   const [isRootPath, setIsRootPath] = useState(false);
 
   useEffect(() => {
-    // Ce code s'exécute uniquement côté client
     const isRoot = window.location.pathname === "/";
     setIsRootPath(isRoot);
     console.log("window.location.pathname", window.location.pathname);

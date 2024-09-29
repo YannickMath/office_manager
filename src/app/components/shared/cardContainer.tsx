@@ -2,12 +2,14 @@ const CardContainer = ({
   children,
   width,
   bgColor = "bg-customCardBg",
+  className,
 }: {
   children: JSX.Element;
   width: string;
   bgColor?: string;
+  className?: string;
 }) => {
-  const containerStyle = `flex flex-wrap ${width} justify-center items-center gap-4 ${bgColor} p-4 rounded-xl overflow-y-auto`;
+  const containerStyle = `flex ${width} ${className} justify-center items-center gap-4 ${bgColor} p-4 rounded-xl`;
   return <div className={`${containerStyle}`}>{children}</div>;
 };
 
