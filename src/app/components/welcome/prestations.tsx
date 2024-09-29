@@ -19,7 +19,7 @@ const Prestations = () => {
       >
         <div className="flex flex-col items-center gap-2 cursor-pointer">
           <Image src={src} alt={alt} width={imageWidth} height={90} />
-          <p className="text-center text-gray-700 text-lg phone:text-base font-bolder underline">
+          <p className="text-center text-gray-700 text-base phone:text-base font-bolder underline">
             {label}
           </p>
         </div>
