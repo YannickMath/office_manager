@@ -20,7 +20,7 @@ const Services = () => {
         <CardContainer
           width="flex flex-col w-1/2 phone:w-full"
           bgColor="bg-gray-200 bg-opacity-70 shadow-lg"
-          className="text-xl font-bolder mt-4 phone:mt-0"
+          className="text-xl phone:text-base font-bolder mt-4 phone:mt-0"
         >
           <IntroductionItems items={introductionItems} />
         </CardContainer>
