@@ -15,16 +15,16 @@ export default function Home() {
         priority
         className="z-[-1]"
       />
-      <div className="w-full z-1">
+      <div className="w-full">
         <Banner />
       </div>
-      <div className="flex w-full justify-center z-10">
+      <div className="flex w-full justify-center">
         <Pourquoi />
       </div>
-      <div className="flex w-full justify-center z-10">
+      <div className="flex w-full justify-center">
         <Cv />
       </div>
-      <div className="flex w-full justify-center z-10">
+      <div className="flex w-full justify-center">
         <Prestations />
       </div>
     </div>
