@@ -29,7 +29,7 @@ const Tarifs = () => {
     return arrayBuilderOffers.map(
       ({ id, title, icon, description, note, button }) => (
         <>
-          <CardContainer width="w-3/4 h-1/2 phone:w-full">
+          <CardContainer width="w-3/4 h-3/4 phone:w-full">
             <div
               key={id}
               className="flex flex-col justify-center items-center p-2 font-medium gap-8"
