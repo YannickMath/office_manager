@@ -38,7 +38,7 @@ const HeaderMenu = () => {
 
   return (
     <div className="relative flex flex-row w-full h-full bg-customBrown justify-center text-xs phone:gap-8 items-center p-4">
-      <Image src="/LOGO_CB_Noire.png" alt="logo" width={180} height={180} />
+      <Image src="/LOGO_CB_Noire.png" alt="logo" width={140} height={140} />
       <nav className="hidden md:flex h-full items-center phone:text-xl text-xl gap-8 phone:ml-0 ml-[5%]">
         {items.map(({ url, label }, index) => (
           <div key={index} className="list-none">

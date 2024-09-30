@@ -18,7 +18,7 @@ const Footer = ({ isCgpsOpen, onToggleCgps }: FooterProps) => {
   const { name, phone, mail, mentions, cgps } = data;
 
   return (
-    <div className="relative">
+    <div className="relative h-20">
       <div className="flex flex-row justify-center items-center p-4 bg-customBrown phone:text-xs font-bolder">
         <div className="flex flex-row w-1/2 phone:w-full justify-around">
           <div className="flex flex-row w-1/3 justify-center items-center">

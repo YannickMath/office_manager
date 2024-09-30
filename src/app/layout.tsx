@@ -28,10 +28,10 @@ export default function RootLayout({
               isCgpsOpen ? "blur-sm" : ""
             }`}
           >
-            <div className="h-32 w-full top-0 z-10 fixed flex items-center header">
+            <div className="phone:h-32 h-24 w-full top-0 z-10 fixed flex items-center header">
               <HeaderMenu />
             </div>
-            <main className="flex-grow mt-32">{children}</main>
+            <main className="flex-grow phone:mt-32 mt-24">{children}</main>
             <Footer isCgpsOpen={isCgpsOpen} onToggleCgps={handleToggleCgps} />
           </div>
           {isCgpsOpen && (
