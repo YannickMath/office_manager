@@ -23,9 +23,8 @@ const config: Config = {
       screens: {
         mini: { max: "498px" },
         phone: { max: "640px" },
-        // => @media (min-width: 480px) { ... }
         laptop: { max: "1024px" },
-        // => @media (min-width: 1024px) { ... }
+        desktop: { min: "1025px" },
       },
       fontFamily: {
         verdana: ["Verdana", "sans-serif"],
