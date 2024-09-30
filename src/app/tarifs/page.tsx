@@ -36,7 +36,7 @@ const Tarifs = () => {
             >
               <div className="flex justify-center items-center gap-4">
                 {icon}
-                <h2 className="text-2xl phone:text-xl">{title}</h2>
+                <h2 className="text-xl phone:text-lg">{title}</h2>
               </div>
               <div className="flex flex-col w-full justify-center items-center gap-2 phone:text-wrap text-center">
                 <p className="text-lg ">{description}</p>

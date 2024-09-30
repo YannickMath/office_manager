@@ -43,7 +43,7 @@ const Prestations = () => {
     <CardContainer width="w-1/2 phone:w-3/4 phone:mb-6">
       <div className="flex flex-col items-center gap-12 phone:gap-6 p-2">
         <div>
-          <h2 className="text-2xl phone:text-xl">Mes prestations</h2>
+          <h2 className="text-xl phone:text-lg">Mes prestations</h2>
         </div>
         <div
           className="flex flex-row gap-4

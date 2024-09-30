@@ -132,7 +132,7 @@ const useServices = () => {
               className="rounded-lg"
             />
           </div>
-          <h2 className="w-full text-2xl phone:text-lg font-bold text-center">
+          <h2 className="w-full text-xl phone:text-lg font-bold text-center">
             {label}
           </h2>
         </div>
