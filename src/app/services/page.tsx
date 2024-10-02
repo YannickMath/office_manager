@@ -16,7 +16,7 @@ const Services = () => {
     phone:bg-contain phone:bg-bottom phone:bg-gray-200
     "
     >
-      <div className="flex flex-col items-center gap-12 phone:gap-4 p-2 phone:p-6 py-4 phone:py-0">
+      <div className="flex flex-col items-center gap-12 phone:gap-4 p-2 phone:p-6 py-6 phone:py-0">
         <CardContainer
           width="flex flex-col w-1/2 phone:w-full"
           bgColor="bg-gray-200 bg-opacity-70 shadow-lg"

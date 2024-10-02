@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col w-full h-full justify-center items-center gap-10 py-6 phone:bg-contain phone:bg-bottom phone:bg-gray-200">
+    <div className="relative flex flex-col w-full h-full justify-center items-center gap-6 py-6 phone:py-0 phone:bg-contain phone:bg-bottom phone:bg-gray-200">
       <Image
         src="/office_manager_main.png"
         layout="fill"
@@ -15,7 +15,7 @@ export default function Home() {
         priority
         className="z-[-1]"
       />
-      <div className="w-full">
+      <div className="w-full phone:mt-2">
         <Banner />
       </div>
       <div className="flex w-full justify-center">
