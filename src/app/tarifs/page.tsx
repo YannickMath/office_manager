@@ -43,7 +43,7 @@ const Tarifs = () => {
                 <p
                   className={`${
                     id === 2
-                      ? "text-lg text-gray-500"
+                      ? "text-lg phone:text-base text-gray-500"
                       : "text-base phone:text-sm"
                   }`}
                 >
