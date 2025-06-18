@@ -9,13 +9,13 @@ const Conditions = ({ onClose }: any) => {
       id: 1,
       title: "Objet",
       content:
-        "Les présentes Conditions Générales de Prestations de Services (ci-après 'CGPS') ont pour objet de définir les termes et conditions dans lesquels [Nom du Freelance] (ci-après 'Cécile Boiron E.I'), propose ses services d'office management en tant que freelance, via le site internet [Nom du Site ou URL].",
+        "Les présentes Conditions Générales de Prestations de Services (ci-après 'CGPS') ont pour objet de définir les termes et conditions dans lesquels [Nom du Freelance] (ci-après 'Cécile Boiron E.I'), propose ses services d'office management en tant que freelance, via le site internet <https />cecileboiron.com.",
     },
     {
       id: 2,
       title: "Services Proposés",
       content:
-        "Cécile Boiron E.I propose des services de gestion administrative, gestion commerciale, gestion du personnel, et pré-comptabilité. Le détail des services proposés est disponible sur le site internet [Nom du Site ou URL].",
+        "Cécile Boiron E.I propose des services de gestion administrative, gestion commerciale, gestion du personnel, et pré-comptabilité. Le détail des services proposés est disponible sur le site internet <https />cecileboiron.com.",
     },
     {
       id: 3,
@@ -63,7 +63,7 @@ const Conditions = ({ onClose }: any) => {
       id: 10,
       title: "Propriété Intellectuelle",
       content:
-        "Tous les éléments du site internet [Nom du Site ou URL], y compris les textes, images, logos et documents, sont la propriété exclusive du Prestataire, sauf mention contraire. Toute reproduction ou utilisation sans autorisation est strictement interdite.",
+        "Tous les éléments du site internet <https />cecileboiron.com, y compris les textes, images, logos et documents, sont la propriété exclusive du Prestataire, sauf mention contraire. Toute reproduction ou utilisation sans autorisation est strictement interdite.",
     },
     {
       id: 11,
@@ -75,7 +75,7 @@ const Conditions = ({ onClose }: any) => {
       id: 12,
       title: "Modification des CGPS",
       content:
-        "Cécile Boiron E.I se réserve le droit de modifier les présentes CGPS à tout moment. Les nouvelles CGPS seront applicables dès leur publication sur le site internet [Nom du Site ou URL].",
+        "Cécile Boiron E.I se réserve le droit de modifier les présentes CGPS à tout moment. Les nouvelles CGPS seront applicables dès leur publication sur le site internet <https />cecileboiron.com.",
     },
     {
       id: 13,
