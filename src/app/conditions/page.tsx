@@ -9,7 +9,7 @@ const Conditions = ({ onClose }: any) => {
       id: 1,
       title: "Objet",
       content:
-        "Les présentes Conditions Générales de Prestations de Services (ci-après 'CGPS') ont pour objet de définir les termes et conditions dans lesquels [Nom du Freelance] (ci-après 'Cécile Boiron E.I'), propose ses services d'office management en tant que freelance, via le site internet cecileboiron.com.",
+        "Les présentes Conditions Générales de Prestations de Services (ci-après 'CGPS') ont pour objet de définir les termes et conditions dans lesquels Cécile Boiron E.I propose ses services d'office management en tant que freelance, via le site internet cecileboiron.com.",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const Conditions = ({ onClose }: any) => {
       id: 4,
       title: "Commande des Services",
       content:
-        "Les services sont commandés directement via le site internet [Nom du Site ou URL] ou par contact direct avec Cécile Boiron E.I. Une fois la commande validée, un devis est établi, mentionnant les prestations, les tarifs, et les délais de réalisation.",
+        "Les services sont commandés directement via le site internet cecileboiron.com ou par contact direct avec Cécile Boiron E.I. Une fois la commande validée, un devis est établi, mentionnant les prestations, les tarifs, et les délais de réalisation.",
     },
     {
       id: 5,
