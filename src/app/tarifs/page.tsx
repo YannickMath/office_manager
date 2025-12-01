@@ -1,6 +1,5 @@
 import { MdOutlineAvTimer } from "react-icons/md";
 import Button from "../components/shared/button";
-import Titre from "../components/shared/titre";
 import { PiPackageFill } from "react-icons/pi";
 import CardContainer from "../components/shared/cardContainer";
 import Image from "next/image"; // Import the Image component from the correct package
@@ -27,13 +26,15 @@ const Tarifs = () => {
 
   const OffersContent = () => {
     return arrayBuilderOffers.map(
-      ({ id, title, icon, description, note, button }) => (
-        <>
-          <CardContainer width="w-3/4 h-2/3 phone:w-full">
-            <div
-              key={id}
-              className="flex flex-col justify-center items-center p-2 font-medium gap-8"
-            >
+      ({ id, title, icon, description, note, button }, index) => (
+        <div
+          key={id}
+          className={`animate-fadeInUp ${
+            index === 1 ? "animate-delay-100" : ""
+          }`}
+        >
+          <CardContainer width="w-full phone:w-full">
+            <div className="flex flex-col justify-center items-center p-2 font-medium gap-8">
               <div className="flex justify-center items-center gap-4">
                 {icon}
                 <h2 className="text-xl phone:text-lg">{title}</h2>
@@ -53,7 +54,7 @@ const Tarifs = () => {
               <div className="flex w-full justify-center">{button}</div>
             </div>
           </CardContainer>
-        </>
+        </div>
       )
     );
   };

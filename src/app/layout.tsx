@@ -6,6 +6,7 @@ import "./globals.css";
 import Footer from "./components/footer/footer";
 import HeaderMenu from "./components/headerMenu/headerMenu";
 import Conditions from "./conditions/page";
+import StickyContact from "./components/shared/stickyContact";
 
 // Note: metadata export cannot be used in client components
 // Metadata should be moved to a separate layout file or root layout
@@ -52,6 +53,7 @@ export default function RootLayout({
               <Conditions onClose={handleToggleCgps} />
             </div>
           )}
+          <StickyContact />
         </body>
       </html>
     </>

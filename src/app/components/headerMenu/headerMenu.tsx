@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { usePathname } from "next/navigation";
 
@@ -37,9 +37,22 @@ const HeaderMenu = () => {
   };
 
   return (
-    <header className="relative flex flex-row w-full h-full bg-customBrown justify-center text-xs phone:gap-8 items-center p-4" role="banner">
-      <Image src="/LOGO_CB_Noire.png" alt="Logo OMI Gestion" width={150} height={150} priority />
-      <nav className="hidden md:flex h-full items-center phone:text-xl text-xl gap-8 phone:ml-0 ml-[5%]" role="navigation" aria-label="Menu principal">
+    <header
+      className="relative flex flex-row w-full h-full bg-customBrown justify-center text-xs phone:gap-8 items-center p-4"
+      role="banner"
+    >
+      <Image
+        src="/LOGO_CB_Noire.png"
+        alt="Logo OMI Gestion"
+        width={150}
+        height={150}
+        priority
+      />
+      <nav
+        className="hidden md:flex h-full items-center phone:text-xl text-xl gap-8 phone:ml-0 ml-[5%]"
+        role="navigation"
+        aria-label="Menu principal"
+      >
         {items.map(({ url, label }, index) => (
           <div key={index} className="list-none">
             <Link href={url}>
@@ -85,23 +98,22 @@ const HeaderMenu = () => {
           <div
             id="dropdown"
             ref={dropdownRef}
-            role="menu"
-            aria-labelledby="dropdownDefaultButton"
             className="absolute right-0 mt-14 w-44 bg-white divide-y divide-gray-100 rounded-lg shadow z-50"
           >
-            <ul className="py-2 text-sm" role="none">
-              {items.map(({ url, label }, index) => (
-                <li key={index} className="list-none" role="none">
-                  <Link
-                    href={url}
-                    className="block px-4 py-2 hover:bg-gray-100 transition-colors"
-                    role="menuitem"
-                  >
-                    <p onClick={closeDropdown}>{label}</p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <nav aria-label="Menu mobile">
+              <ul className="py-2 text-sm">
+                {items.map(({ url, label }, index) => (
+                  <li key={index} className="list-none">
+                    <Link
+                      href={url}
+                      className="block px-4 py-2 hover:bg-gray-100 transition-colors"
+                    >
+                      <p onClick={closeDropdown}>{label}</p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         )}
       </div>

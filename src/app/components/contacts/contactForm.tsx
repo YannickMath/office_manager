@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import useContacts from "@/app/hooks/useContacts";
 
 import { GrValidate } from "react-icons/gr";

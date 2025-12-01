@@ -1,7 +1,6 @@
 import useWelcome from "@/app/hooks/useWelcome";
 import CardContainer from "../shared/cardContainer";
 import Button from "../shared/button";
-import Image from "next/image"; // Import the Image component from the correct package
 
 const Cv = () => {
   const { arrayBuilderCvItems } = useWelcome();
@@ -20,15 +19,6 @@ const Cv = () => {
       <div className="flex flex-col gap-12 phone:gap-6 phone:text-center p-2 phone:p-2 items-center">
         <div className="flex flex-col h-1/4 gap-4">
           <div className="flex flex-col items-center justify-center rounded-xl text-base phone:text-sm w-full text-center gap-4 p-2">
-            {/* <div className="phone:flex items-center hidden justify-center phone:h-64 phone:w-36 relative h-56 w-24">
-              <Image
-                src="/cecile2.png"
-                layout="fill"
-                objectFit="cover"
-                alt="Cécile Boiron"
-                className="rounded-lg"
-              />
-            </div> */}
             <div className="flex flex-col justify-center items-center gap-4">
               <Items />
             </div>

@@ -29,8 +29,9 @@ export default function Button({
         type="button"
         className={`${size ? buttonSizeMap[size] : ""}
         ${color ? colorMap[color] : ""}
-        text-white text-sm phone:text-xs font-bold py-2 px-4 rounded-lg
-        bg-blue-600 hover:bg-blue-900 transition duration-500 ease-in-out
+        text-white text-base phone:text-sm font-bold py-3 px-6 phone:py-2 phone:px-4 rounded-lg
+        bg-blue-600 hover:bg-blue-800 hover:scale-105 hover:shadow-xl
+        transition-all duration-300 ease-in-out shadow-lg
         `}
       >
         {label}
