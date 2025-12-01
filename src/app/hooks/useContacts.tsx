@@ -15,7 +15,7 @@ const useContacts = () => {
     setIsLoading(true);
     setResult("");
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB_3_FORMS_API_KEY;
+    const accessKey = process.env.NEXT_PRIVATE_WEB_3_FORMS_API_KEY;
     if (!accessKey) {
       setResult("Clé d'accès introuvable. Veuillez vérifier la configuration.");
       setIsLoading(false);
