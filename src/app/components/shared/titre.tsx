@@ -13,8 +13,6 @@ export default function Titre({ title, description }: TitreProps): JSX.Element {
   useEffect(() => {
     const isRoot = window.location.pathname === "/";
     setIsRootPath(isRoot);
-    console.log("window.location.pathname", window.location.pathname);
-    console.log("isRootPath after setting", isRoot);
   }, []);
   return (
     <div

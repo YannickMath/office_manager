@@ -23,7 +23,7 @@ const useServices = () => {
       id: 1,
       label: "Gestion administrative",
       src: "/gestion_administrative.png",
-      alt: "secretariat",
+      alt: "Icône gestion administrative - secrétariat et organisation",
       list: [
         "Gestion des mails et du courrier.",
         "Gestion des plannings.",
@@ -40,7 +40,7 @@ const useServices = () => {
       id: 2,
       label: "Gestion commerciale",
       src: "/gestion_commerciale.png",
-      alt: "secretariat2",
+      alt: "Icône gestion commerciale - facturation et suivi",
       list: [
         "Création et mise à jour des fichiers prestataires et fournisseurs.",
         "Suivi des commandes et des livraisons.",
@@ -53,7 +53,7 @@ const useServices = () => {
       id: 3,
       label: "Gestion du personnel",
       src: "/gestion_du_personnel.png",
-      alt: "secretariat3",
+      alt: "Icône gestion du personnel - ressources humaines",
       list: [
         "Rédaction et diffusion des offres d'emploi.",
         "Sélection des candidatures et entretiens.",
@@ -69,7 +69,7 @@ const useServices = () => {
       id: 4,
       label: "Pré-comptabilité",
       src: "/gestion_pré_comptabilité.png",
-      alt: "secretariat4",
+      alt: "Icône pré-comptabilité - gestion financière",
       list: [
         "Classement et transmission des pièces comptables à votre expert.",
         "Enregistrement et règlement des factures fournisseurs.",
@@ -127,8 +127,8 @@ const useServices = () => {
             <Image
               src={src}
               alt={alt}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: 'cover' }}
               className="rounded-lg"
             />
           </div>

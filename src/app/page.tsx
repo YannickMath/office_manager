@@ -9,8 +9,8 @@ export default function Home() {
     <div className="relative flex flex-col w-full h-full justify-center items-center gap-6 py-6 phone:py-0 phone:bg-contain phone:bg-bottom phone:bg-gray-200">
       <Image
         src="/office_manager_main.png"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: 'cover' }}
         alt="Office background"
         priority
         className="z-[-1]"

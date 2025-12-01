@@ -62,8 +62,8 @@ const Tarifs = () => {
     <div className="relative flex flex-col h-full justify-between items-center phone:py-4">
       <Image
         src="/office_manager_main.png"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: 'cover' }}
         alt="Office background"
         priority
         className="z-[-1]"

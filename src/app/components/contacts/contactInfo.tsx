@@ -6,11 +6,11 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 
 const ContactInfo = () => {
   const infoPersonnel = {
-    nom: "Cécile BOIRON",
-    adresse: "69007 LYON",
-    activité: "Office Manager Indépendant",
-    email: "omi.cb.contact@gmail.com",
-    téléphone: "06 21 89 91 32",
+    nom: process.env.NEXT_PUBLIC_OWNER_NAME || "",
+    adresse: process.env.NEXT_PUBLIC_ADDRESS || "",
+    activité: process.env.NEXT_PUBLIC_ACTIVITY || "Office Manager Indépendant",
+    email: process.env.NEXT_PUBLIC_EMAIL || "",
+    téléphone: process.env.NEXT_PUBLIC_PHONE || "",
   };
 
   const { nom, adresse, activité, email, téléphone } = infoPersonnel;

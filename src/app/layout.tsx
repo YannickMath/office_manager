@@ -7,6 +7,9 @@ import Footer from "./components/footer/footer";
 import HeaderMenu from "./components/headerMenu/headerMenu";
 import Conditions from "./conditions/page";
 
+// Note: metadata export cannot be used in client components
+// Metadata should be moved to a separate layout file or root layout
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +23,17 @@ export default function RootLayout({
 
   return (
     <>
-      <html lang="en" className="h-full w-full">
+      <html lang="fr" className="h-full w-full">
+        <head>
+          <title>{process.env.NEXT_PUBLIC_BUSINESS_NAME || "Office Manager"} - Office Manager Indépendant</title>
+          <meta name="description" content={`${process.env.NEXT_PUBLIC_BUSINESS_NAME || "Office Manager"} propose des services d'office manager pour les entreprises : gestion administrative, commerciale, du personnel et pré-comptabilité. Services professionnels sur mesure.`} />
+          <meta name="keywords" content="office manager, gestion administrative, assistante indépendante, secrétariat, gestion commerciale, ressources humaines" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content={`${process.env.NEXT_PUBLIC_BUSINESS_NAME || "Office Manager"} - Office Manager Indépendant`} />
+          <meta property="og:description" content="Services d'office manager professionnels : gestion administrative, commerciale, du personnel et pré-comptabilité." />
+          <meta property="og:type" content="website" />
+          <meta property="og:locale" content="fr_FR" />
+        </head>
         <body className="h-full w-full">
           {/* blur effect */}
           <div

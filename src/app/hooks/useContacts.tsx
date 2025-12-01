@@ -5,16 +5,20 @@ import { useState } from "react";
 const useContacts = () => {
   const [result, setResult] = useState<string>("");
   const [success, setSuccess] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsLoading(true);
+    setResult("");
 
     const accessKey = process.env.NEXT_PUBLIC_WEB_3_FORMS_API_KEY;
     if (!accessKey) {
       setResult("Clé d'accès introuvable. Veuillez vérifier la configuration.");
+      setIsLoading(false);
       return;
     }
 
@@ -34,6 +38,7 @@ const useContacts = () => {
 
       if (response.ok && data.success) {
         setSuccess(true);
+        setIsLoading(false);
         setTimeout(() => {
           setSuccess(false);
           setResult("");
@@ -44,9 +49,11 @@ const useContacts = () => {
         setMessage("");
       } else {
         setResult(data.message || "Une erreur s'est produite lors de l'envoi.");
+        setIsLoading(false);
       }
     } catch (error) {
       setResult("Une erreur s'est produite. Veuillez réessayer plus tard.");
+      setIsLoading(false);
     }
   };
 
@@ -75,6 +82,7 @@ const useContacts = () => {
     result,
     onSubmit,
     success,
+    isLoading,
     name,
     setName,
     email,

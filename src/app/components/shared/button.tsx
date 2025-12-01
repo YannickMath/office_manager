@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ButtonProps } from "@/app/interface/buttonInterface";
 
 const buttonSizeMap: { [key: string]: string } = {
@@ -23,7 +24,7 @@ export default function Button({
   size = "normal",
 }: ButtonProps) {
   return (
-    <a href={url}>
+    <Link href={url}>
       <button
         type="button"
         className={`${size ? buttonSizeMap[size] : ""}
@@ -34,6 +35,6 @@ export default function Button({
       >
         {label}
       </button>
-    </a>
+    </Link>
   );
 }

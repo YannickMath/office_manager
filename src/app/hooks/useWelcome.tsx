@@ -1,11 +1,13 @@
 import Image from "next/image";
 
 const useWelcome = () => {
+  const ownerName = process.env.NEXT_PUBLIC_OWNER_NAME || "votre office manager";
+
   const arrayBuilderCvItems = [
     {
       id: 1,
       label:
-        "Bonjour, je suis Cécile Boiron, ancienne assistante dentaire qualifiée, avec une vingtaine d'années d'expérience auprès des chirurgiens dentistes. Je dispose d'un riche parcours professionnel qui m'apporte aujourd'hui de solides compétences sur de multiples aspects de la gestion dans un cabinet dentaire.",
+        `Bonjour, je suis ${ownerName}, ancienne assistante dentaire qualifiée, avec une vingtaine d'années d'expérience auprès des chirurgiens dentistes. Je dispose d'un riche parcours professionnel qui m'apporte aujourd'hui de solides compétences sur de multiples aspects de la gestion dans un cabinet dentaire.`,
     },
     {
       id: 2,
@@ -36,25 +38,25 @@ const useWelcome = () => {
       id: 1,
       label: "Gestion administrative",
       src: "/gestion_administrative.png",
-      alt: "secretariat",
+      alt: "Icône gestion administrative - secrétariat et organisation",
     },
     {
       id: 2,
       label: "Gestion commerciale",
       src: "/gestion_commerciale.png",
-      alt: "secretariat2",
+      alt: "Icône gestion commerciale - facturation et suivi",
     },
     {
       id: 3,
       label: "Gestion du personnel",
       src: "/gestion_du_personnel.png",
-      alt: "secretariat3",
+      alt: "Icône gestion du personnel - ressources humaines",
     },
     {
       id: 4,
       label: "Pré-comptabilité",
       src: "/gestion_pré_comptabilité.png",
-      alt: "secretariat4",
+      alt: "Icône pré-comptabilité - gestion financière",
     },
   ];
 
