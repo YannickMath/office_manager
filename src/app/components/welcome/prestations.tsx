@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import useWelcome from "@/app/hooks/useWelcome";
+import { getServiceImages } from "@/app/data/welcomeData";
 import CardContainer from "../shared/cardContainer";
 
 const Prestations = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const PrestationsContent = () => {
-    const { arrayBuilderImages } = useWelcome();
+    const arrayBuilderImages = getServiceImages();
     return arrayBuilderImages.map(({ id, label, src, alt }) => (
       <Link
         key={id}

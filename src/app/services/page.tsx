@@ -3,11 +3,11 @@ import React from "react";
 import Titre from "../components/shared/titre";
 import Button from "../components/shared/button";
 import CardContainer from "../components/shared/cardContainer";
-import useServices from "../hooks/useServices";
+import { getServices, getIntroductionItems, IntroductionItems, ServiceSection } from "../data/servicesData";
 
 const Services = () => {
-  const { services, introductionItems, IntroductionItems, ServiceSection } =
-    useServices();
+  const services = getServices();
+  const introductionItems = getIntroductionItems();
 
   return (
     <div

@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
-const Conditions = ({ onClose }: any) => {
+const Conditions = ({ onClose }: { onClose: () => void }) => {
   const termsAndConditions = [
     {
       id: 1,

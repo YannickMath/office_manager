@@ -1,9 +1,9 @@
 import { GrValidate } from "react-icons/gr";
-import useWelcome from "@/app/hooks/useWelcome";
+import { getPourquoiItems } from "@/app/data/welcomeData";
 import CardContainer from "../shared/cardContainer";
 
 const Pourquoi = () => {
-  const { arrayBuilderPourquoiItems } = useWelcome();
+  const arrayBuilderPourquoiItems = getPourquoiItems();
   const PourquoiItemContent: React.FC<{ id: number; label: string }> = ({
     id,
     label,

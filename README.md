@@ -9,11 +9,13 @@ This is a responsive, SEO-optimized website showcasing office management service
 ## 🚀 Tech Stack
 
 - **Framework**: Next.js 16.0.6 (App Router)
-- **Language**: TypeScript 5
+- **Language**: TypeScript 5 (Strict Mode)
 - **UI Library**: React 19
 - **Styling**: Tailwind CSS 3.4.1
 - **Icons**: React Icons 5.2.1
 - **Form Service**: Web3Forms API
+- **Code Quality**: ESLint, TypeScript strict mode
+- **Architecture**: React Server Components + Client Components pattern
 
 ## ✨ Features
 
@@ -27,6 +29,9 @@ This is a responsive, SEO-optimized website showcasing office management service
 - ✅ **Error Handling** - Custom error boundaries and 404 page
 - ✅ **Loading States** - Smooth transitions and user feedback
 - ✅ **Contact Form** - Integrated with Web3Forms API
+- ✅ **Type Safety** - Full TypeScript coverage with strict mode
+- ✅ **Modern Architecture** - Proper separation of concerns (data/hooks/components)
+- ✅ **React Best Practices** - Correct "use client" directives, proper hook conventions
 
 ### Pages
 
@@ -47,11 +52,20 @@ office_manager/
 │       │   ├── contacts/        # Contact form and info
 │       │   ├── footer/          # Footer component
 │       │   ├── headerMenu/      # Navigation header
-│       │   ├── shared/          # Shared components
+│       │   ├── shared/          # Shared components (Button, Card, etc.)
 │       │   └── welcome/         # Home page sections
-│       ├── hooks/               # Custom React hooks
+│       ├── data/                # Static data and content
+│       │   ├── welcomeData.ts   # Home page content
+│       │   └── servicesData.tsx # Services page content & components
+│       ├── hooks/               # Custom React hooks (with "use client")
+│       │   ├── useContacts.tsx  # Contact form logic
+│       │   └── useHeaderMenu.tsx # Navigation menu logic
 │       ├── interface/           # TypeScript interfaces
+│       │   ├── buttonInterface.ts
+│       │   ├── footerInterface.ts
+│       │   └── headerMenuInterface.ts
 │       ├── utils/               # Utility functions
+│       │   └── clickOutside.tsx # Click outside detector hook
 │       ├── conditions/          # Terms & conditions page
 │       ├── contacts/            # Contact page
 │       ├── services/            # Services page
@@ -323,6 +337,15 @@ The `sitemap.ts` file generates `/sitemap.xml` with a complete list of your page
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Web3Forms Documentation](https://docs.web3forms.com/)
 
+## 🏗️ Architecture Highlights
+
+### Code Organization
+
+- **Separation of Concerns**: Clear distinction between data (`data/`), business logic (`hooks/`), and UI (`components/`)
+- **React Conventions**: All hooks follow the `use*` naming convention and properly utilize React hooks
+- **Client/Server Components**: Strategic use of "use client" directive for interactive components only
+- **Type Safety**: Comprehensive TypeScript interfaces for all data structures
+
 ## 📄 License
 
 Private project - All rights reserved
@@ -339,3 +362,4 @@ For technical support or questions about this project, please refer to the conta
 
 **Next.js Version**: 16.0.6
 **React Version**: 19.2.0
+**Build Status**: ✅ Passing

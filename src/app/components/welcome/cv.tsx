@@ -1,9 +1,9 @@
-import useWelcome from "@/app/hooks/useWelcome";
+import { getCvItems } from "@/app/data/welcomeData";
 import CardContainer from "../shared/cardContainer";
 import Button from "../shared/button";
 
 const Cv = () => {
-  const { arrayBuilderCvItems } = useWelcome();
+  const arrayBuilderCvItems = getCvItems();
   const Items = () => (
     <>
       {arrayBuilderCvItems.map(({ id, label }) => (

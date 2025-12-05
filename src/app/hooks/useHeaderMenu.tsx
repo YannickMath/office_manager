@@ -1,6 +1,8 @@
+"use client";
+
 import { useRef, useState } from "react";
 import ClickOutside from "../utils/clickOutside";
-import { ItemProps } from "../interface/haderMenuInterface";
+import { ItemProps } from "../interface/headerMenuInterface";
 
 const useHeaderMenu = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);

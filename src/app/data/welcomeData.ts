@@ -1,9 +1,11 @@
-import Image from "next/image";
+export const getOwnerName = () => {
+  return process.env.NEXT_PUBLIC_OWNER_NAME || "votre office manager";
+};
 
-const useWelcome = () => {
-  const ownerName = process.env.NEXT_PUBLIC_OWNER_NAME || "votre office manager";
+export const getCvItems = () => {
+  const ownerName = getOwnerName();
 
-  const arrayBuilderCvItems = [
+  return [
     {
       id: 1,
       label:
@@ -24,16 +26,20 @@ const useWelcome = () => {
         "Petit plus: la confidentialité. Pour les dirigeants qui préfèrent que certaines données sensibles, notamment RH ou financières, ne soient pas gérées en interne par un salarié.",
     },
   ];
+};
 
-  const arrayBuilderPourquoiItems = [
+export const getPourquoiItems = () => {
+  return [
     { id: 1, label: "Se consacrer pleinement à son coeur de métier" },
     { id: 2, label: "Gagner en productivité" },
     { id: 3, label: "Se libérer du temps" },
     { id: 4, label: "Déléguer en toute sérénité et confidentialité" },
     { id: 5, label: "Maîtriser son budget" },
   ];
+};
 
-  const arrayBuilderImages = [
+export const getServiceImages = () => {
+  return [
     {
       id: 1,
       label: "Gestion administrative",
@@ -59,8 +65,4 @@ const useWelcome = () => {
       alt: "Icône pré-comptabilité - gestion financière",
     },
   ];
-
-  return { arrayBuilderCvItems, arrayBuilderPourquoiItems, arrayBuilderImages };
 };
-
-export default useWelcome;

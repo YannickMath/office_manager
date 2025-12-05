@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { BsArrowRightShort } from "react-icons/bs";
 
-const useServices = () => {
-  const introductionItems = [
+export const getIntroductionItems = () => {
+  return [
     {
       id: 1,
       label:
@@ -17,8 +17,10 @@ const useServices = () => {
       label: "Discutons ensemble de vos besoins.",
     },
   ];
+};
 
-  const services = [
+export const getServices = () => {
+  return [
     {
       id: 1,
       label: "Gestion administrative",
@@ -79,71 +81,68 @@ const useServices = () => {
       ],
     },
   ];
-
-  const IntroductionItems = ({
-    items,
-  }: {
-    items: { id: number; label: string }[];
-  }) => {
-    return items.map(({ id, label }: { id: number; label: string }) => (
-      <p key={id} className="flex flex-col h-full text-center">
-        {label}
-      </p>
-    ));
-  };
-
-  const ListItems = ({ list }: { list: string[] }) => {
-    return list.map((item: string, index: number) => (
-      <ul
-        key={index}
-        className="flex flex-row items-center gap-2 phone:text-sm"
-      >
-        <BsArrowRightShort className="flex-shrink-0 w-4 h-4" />
-        <li>{item}</li>
-      </ul>
-    ));
-  };
-  const ServiceSection = ({
-    id,
-    label,
-    src,
-    alt,
-    list,
-  }: {
-    id: number;
-    label: string;
-    src: string;
-    alt: string;
-    list: string[];
-  }) => {
-    return (
-      <div
-        key={id}
-        className="flex flex-col w-full h-full p-4 rounded-lg gap-6"
-        id={label.replace(/\s+/g, "-").toLowerCase()}
-      >
-        <div className="flex flex-row phone:flex-col w-full gap-6 items-center">
-          <div className="phone:w-12 phone:h-12 w-24 h-24 relative">
-            <Image
-              src={src}
-              alt={alt}
-              fill
-              style={{ objectFit: 'cover' }}
-              className="rounded-lg"
-            />
-          </div>
-          <h2 className="w-full text-xl phone:text-lg font-bold text-center">
-            {label}
-          </h2>
-        </div>
-        <ul className="flex flex-col gap-2">
-          <ListItems list={list} />
-        </ul>
-      </div>
-    );
-  };
-
-  return { introductionItems, services, IntroductionItems, ServiceSection };
 };
 
-export default useServices;
+export const IntroductionItems = ({
+  items,
+}: {
+  items: { id: number; label: string }[];
+}) => {
+  return items.map(({ id, label }: { id: number; label: string }) => (
+    <p key={id} className="flex flex-col h-full text-center">
+      {label}
+    </p>
+  ));
+};
+
+export const ListItems = ({ list }: { list: string[] }) => {
+  return list.map((item: string, index: number) => (
+    <ul
+      key={index}
+      className="flex flex-row items-center gap-2 phone:text-sm"
+    >
+      <BsArrowRightShort className="flex-shrink-0 w-4 h-4" />
+      <li>{item}</li>
+    </ul>
+  ));
+};
+
+export const ServiceSection = ({
+  id,
+  label,
+  src,
+  alt,
+  list,
+}: {
+  id: number;
+  label: string;
+  src: string;
+  alt: string;
+  list: string[];
+}) => {
+  return (
+    <div
+      key={id}
+      className="flex flex-col w-full h-full p-4 rounded-lg gap-6"
+      id={label.replace(/\s+/g, "-").toLowerCase()}
+    >
+      <div className="flex flex-row phone:flex-col w-full gap-6 items-center">
+        <div className="phone:w-12 phone:h-12 w-24 h-24 relative">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            style={{ objectFit: 'cover' }}
+            className="rounded-lg"
+          />
+        </div>
+        <h2 className="w-full text-xl phone:text-lg font-bold text-center">
+          {label}
+        </h2>
+      </div>
+      <ul className="flex flex-col gap-2">
+        <ListItems list={list} />
+      </ul>
+    </div>
+  );
+};
